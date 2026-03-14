@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lost &amp; Found</string>
+
+    <!-- Home Screen -->
+    <string name="report_lost_item">Report Lost Item</string>
+    <string name="report_found_item">Report Found Item</string>
+    <string name="search_items">Search items…</string>
+    <string name="filter_all">All</string>
+    <string name="filter_lost">Lost</string>
+    <string name="filter_found">Found</string>
+    <string name="no_items_found">No items found</string>
+    <string name="no_items_description">Be the first to report a lost or found item</string>
+    <string name="loading_items">Loading items…</string>
+
+    <!-- Report Screens -->
+    <string name="item_name">Item Name</string>
+    <string name="item_name_hint">e.g. Black Backpack</string>
+    <string name="description">Description</string>
+    <string name="description_hint">Describe the item in detail…</string>
+    <string name="location_lost">Location Lost</string>
+    <string name="location_lost_hint">Where was the item lost?</string>
+    <string name="location_found">Location Found</string>
+    <string name="location_found_hint">Where was the item found?</string>
+    <string name="drop_off_location">Drop-off Location (optional)</string>
+    <string name="drop_off_location_hint">Where can the owner pick it up?</string>
+    <string name="contact_phone">Contact Phone</string>
+    <string name="contact_phone_hint">Your phone number</string>
+    <string name="date_lost">Date Lost</string>
+    <string name="date_found">Date Found</string>
+    <string name="select_date">Select Date</string>
+    <string name="submit_lost_item">Submit Lost Item</string>
+    <string name="submit_found_item">Submit Found Item</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="take_photo">Take Photo</string>
+    <string name="choose_from_gallery">Choose from Gallery</string>
+    <string name="select_image_source">Select Image Source</string>
+    <string name="image_preview">Image preview</string>
+    <string name="tap_to_add_photo">Tap to add a photo</string>
+
+    <!-- Validation errors -->
+    <string name="error_item_name_required">Item name is required</string>
+    <string name="error_location_required">Location is required</string>
+    <string name="error_phone_required">Contact phone is required</string>
+    <string name="error_image_required">Please select an image</string>
+    <string name="error_date_required">Please select a date</string>
+
+    <!-- Detail Screen -->
+    <string name="item_details">Item Details</string>
+    <string name="call_contact">Call Contact</string>
+    <string name="status_lost">LOST</string>
+    <string name="status_found">FOUND</string>
+    <string name="location_label">Location</string>
+    <string name="drop_off_label">Drop-off Location</string>
+    <string name="contact_label">Contact</string>
+    <string name="date_label">Date</string>
+    <string name="description_label">Description</string>
+
+    <!-- General -->
+    <string name="uploading">Uploading…</string>
+    <string name="success">Item reported successfully!</string>
+    <string name="error_upload">Failed to upload. Please try again.</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- New UI Strings -->
+    <string name="action_back">Back</string>
+    <string name="tap_to_add_image">Tap to add an image</string>
+    <string name="hint_item_name">Item Name</string>
+    <string name="hint_description">Description</string>
+    <string name="hint_location_lost">Where did you lose it?</string>
+    <string name="hint_location_found">Where did you find it?</string>
+    <string name="hint_drop_off_location">Drop-off location (Optional)</string>
+    <string name="hint_phone">Phone Number</string>
+    <string name="hint_date">Date</string>
+    <string name="submit_report">Submit Report</string>
+</resources>

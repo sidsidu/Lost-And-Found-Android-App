@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     THEME — Material Design 3, Modern 2025 Feel
+     Clean, minimal, smooth, animated
+     ============================================================ -->
+<resources>
+    <style name="Theme.LostAndFound" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary colors -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorPrimaryVariant">@color/primary_variant</item>
+        <item name="colorOnPrimary">@color/on_primary</item>
+
+        <!-- Secondary colors -->
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="colorSecondaryVariant">@color/secondary_variant</item>
+        <item name="colorOnSecondary">@color/on_secondary</item>
+
+        <!-- Surface / Background -->
+        <item name="android:colorBackground">@color/background</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorOnSurface">@color/on_surface</item>
+        <item name="colorOnSurfaceVariant">@color/on_surface_variant</item>
+
+        <!-- Status bar — translucent dark blue -->
+        <item name="android:statusBarColor">@color/primary_dark</item>
+        <item name="android:navigationBarColor">@color/surface</item>
+        <item name="android:windowLightNavigationBar">true</item>
+
+        <!-- Global activity transitions -->
+        <item name="android:windowAnimationStyle">@style/WindowAnimationTransition</item>
+
+        <!-- Modern rounded shapes by default -->
+        <item name="shapeAppearanceSmallComponent">@style/ShapeSmall</item>
+        <item name="shapeAppearanceMediumComponent">@style/ShapeMedium</item>
+        <item name="shapeAppearanceLargeComponent">@style/ShapeLarge</item>
+    </style>
+
+    <!-- ── WINDOW TRANSITIONS ─────────────────────────────────── -->
+    <style name="WindowAnimationTransition">
+        <item name="android:windowEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+
+    <!-- ── ROUNDED SHAPES ─────────────────────────────────────── -->
+    <style name="ShapeSmall" parent="ShapeAppearance.Material3.SmallComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+
+    <style name="ShapeMedium" parent="ShapeAppearance.Material3.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <style name="ShapeLarge" parent="ShapeAppearance.Material3.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">24dp</item>
+    </style>
+
+    <!-- ── BUTTON STYLES (M3 Variants) ────────────────────────── -->
+    <!-- 1. Filled (Primary) -->
+    <style name="Widget.LostFound.Button.Primary" parent="Widget.Material3.Button">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/primary_foreground</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+
+    <!-- 2. Elevated -->
+    <style name="Widget.LostFound.Button.Elevated" parent="Widget.Material3.Button.ElevatedButton">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="backgroundTint">@color/card</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+
+    <!-- 3. Tonal (Secondary) -->
+    <style name="Widget.LostFound.Button.Tonal" parent="Widget.Material3.Button.TonalButton">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="backgroundTint">@color/secondary</item>
+        <item name="android:textColor">@color/secondary_foreground</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+
+    <!-- 4. Outlined -->
+    <style name="Widget.LostFound.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+
+    <!-- 5. Text -->
+    <style name="Widget.LostFound.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+
+    <!-- 6. Destructive -->
+    <style name="Widget.LostFound.Button.Destructive" parent="Widget.Material3.Button">
+        <item name="cornerRadius">20dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:letterSpacing">0.01</item>
+        <item name="backgroundTint">@color/destructive</item>
+        <item name="android:textColor">@color/destructive_foreground</item>
+        <item name="rippleColor">@color/ripple_color</item>
+    </style>
+
+    <!-- ── TEXT INPUT STYLE ────────────────────────────────────── -->
+    <style name="Widget.LostFound.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">14dp</item>
+        <item name="boxCornerRadiusTopEnd">14dp</item>
+        <item name="boxCornerRadiusBottomStart">14dp</item>
+        <item name="boxCornerRadiusBottomEnd">14dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+    </style>
+
+    <!-- ── CARD STYLE ─────────────────────────────────────────── -->
+    <style name="Widget.LostFound.CardView" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardCornerRadius">20dp</item>
+        <item name="cardElevation">2dp</item>
+        <item name="contentPadding">0dp</item>
+    </style>
+
+    <!-- ── BOTTOM SHEET STYLE ─────────────────────────────────── -->
+    <style name="Widget.LostFound.BottomSheet" parent="Widget.Material3.BottomSheet">
+        <item name="shapeAppearance">@style/ShapeBottomSheet</item>
+    </style>
+
+    <style name="ShapeBottomSheet" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopLeft">24dp</item>
+        <item name="cornerSizeTopRight">24dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+    </style>
+
+    <!-- ── CHIP STYLE ─────────────────────────────────────────── -->
+    <style name="Widget.LostFound.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipCornerRadius">20dp</item>
+        <item name="chipMinHeight">36dp</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+</resources>

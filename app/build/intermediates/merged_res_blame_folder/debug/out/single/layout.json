@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-mergeDebugResources-45:\\layout\\activity_report_found.xml",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_report_found.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-mergeDebugResources-45:\\layout\\activity_item_detail.xml",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_item_detail.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-mergeDebugResources-45:\\layout\\item_card.xml",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\item_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-mergeDebugResources-45:\\layout\\bottom_sheet_report.xml",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\bottom_sheet_report.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-mergeDebugResources-45:\\layout\\activity_spotlight_demo.xml",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_spotlight_demo.xml"
+    },
+    {
+        "merged": "com.example.lostfound.app-mergeDebugResources-45:/layout/activity_main.xml",
+        "source": "com.example.lostfound.app-main-48:/layout/activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-mergeDebugResources-45:\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-mergeDebugResources-45:\\layout\\activity_report_lost.xml",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_report_lost.xml"
+    }
+]

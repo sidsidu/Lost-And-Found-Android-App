@@ -1,0 +1,19 @@
+<lint-module
+    format="1"
+    dir="C:\Users\Sid\Desktop\Coding Stuff\Lost And Found Android App\app"
+    name=":app"
+    type="APP"
+    maven="LostAndFound:app:"
+    agpVersion="8.2.2"
+    buildFolder="build"
+    bootClassPath="C:\Users\Sid\AppData\Local\Android\Sdk\platforms\android-34\android.jar;C:\Users\Sid\AppData\Local\Android\Sdk\build-tools\34.0.0\core-lambda-stubs.jar"
+    javaSourceLevel="17"
+    compileTarget="android-34"
+    neverShrinking="true">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

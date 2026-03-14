@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     COLOR PALETTE — Material Design 3 (Dark Theme)
+     Converted from React HSL variables
+     ============================================================ -->
+<resources>
+    <color name="background">#0B0E0F</color> <!-- hsl(200 21% 5%) -->
+    <color name="foreground">#DFE7EA</color> <!-- hsl(201 27% 90%) -->
+    
+    <color name="card">#0F1215</color> <!-- hsl(203 21% 7%) -->
+    <color name="card_foreground">#DFE7EA</color>
+
+    <color name="popover">#14171A</color> <!-- hsl(198 20% 10%) -->
+    <color name="popover_foreground">#DFE7EA</color>
+
+    <!-- Primary brand colors -->
+    <color name="primary">#A3CCDE</color> <!-- hsl(199 52% 76%) -->
+    <color name="primary_foreground">#162335</color> <!-- hsl(196 59% 21%) -->
+    <color name="on_primary">@color/primary_foreground</color>
+    <color name="primary_dark">#78A1B4</color>
+    <color name="primary_variant">#1A4559</color>
+
+    <!-- Secondary / Tonal colors -->
+    <color name="secondary">#2A3644</color> <!-- hsl(199 26% 22%) -->
+    <color name="secondary_foreground">#A8C2CD</color> <!-- hsl(199 26% 74%) -->
+    <color name="on_secondary">@color/secondary_foreground</color>
+    <color name="secondary_variant">#344A63</color> <!-- Slightly lighter variant for dark theme -->
+    
+    <color name="muted">#1F2427</color> <!-- hsl(200 16% 15%) -->
+    <color name="muted_foreground">#A0ACB4</color> <!-- hsl(203 8% 67%) -->
+
+    <color name="accent">#C3D3FD</color> <!-- hsl(223 94% 87%) -->
+    <color name="accent_foreground">#364A6B</color>
+
+    <color name="destructive">#F66D6A</color> <!-- hsl(2 93% 71%) -->
+    <color name="destructive_foreground">#000000</color> <!-- hsl(0 0% 0%) -->
+
+    <color name="border">#414C51</color> <!-- hsl(203 9% 28%) -->
+    <color name="input">#414C51</color>
+    
+    <!-- Misc Mappings for Android Theme Elements -->
+    <color name="surface">@color/background</color>
+    <color name="on_surface">@color/foreground</color>
+    <color name="on_surface_variant">@color/muted_foreground</color>
+    <color name="surface_variant">@color/muted</color>
+
+    <!-- Misc -->
+    <color name="ripple_color">#1FFFFFFF</color> 
+</resources>

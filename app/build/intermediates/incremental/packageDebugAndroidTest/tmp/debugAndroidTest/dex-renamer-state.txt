@@ -1,0 +1,4 @@
+#Fri Mar 13 16:37:46 IST 2026
+base.0=C\:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\build\\intermediates\\dex\\debugAndroidTest\\mergeProjectDexDebugAndroidTest\\0\\classes.dex
+path.0=0/classes.dex
+renamed.0=classes.dex

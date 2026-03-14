@@ -1,0 +1,4 @@
+com.example.lostfound.test.app-androidTest-0 C:\Users\Sid\Desktop\Coding Stuff\Lost And Found Android App\app\build\generated\res\resValues\androidTest\debug
+com.example.lostfound.test.app-mergeDebugAndroidTestResources-1 C:\Users\Sid\Desktop\Coding Stuff\Lost And Found Android App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.example.lostfound.test.app-mergeDebugAndroidTestResources-2 C:\Users\Sid\Desktop\Coding Stuff\Lost And Found Android App\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.example.lostfound.test.app-merged_res-3 C:\Users\Sid\Desktop\Coding Stuff\Lost And Found Android App\app\build\intermediates\merged_res\debugAndroidTest

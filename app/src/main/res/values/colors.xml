@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ============================================================
+     COLOR PALETTE — Material Design 3 (Light Theme)
+     Converted from React HSL variables
+     ============================================================ -->
+<resources>
+    <color name="background">#FAFAFA</color> <!-- hsl(204 45% 98%) -->
+    <color name="foreground">#2B3135</color> <!-- hsl(198 13% 19%) -->
+    
+    <color name="card">#EFF4F8</color> <!-- hsl(207 39% 95%) -->
+    <color name="card_foreground">#2B3135</color>
+
+    <color name="popover">#EBF2F6</color> <!-- hsl(204 29% 93%) -->
+    <color name="popover_foreground">#2B3135</color>
+
+    <!-- Primary brand colors -->
+    <color name="primary">#27627D</color> <!-- hsl(196 52% 32%) -->
+    <color name="primary_foreground">#F2FAFE</color> <!-- hsl(203 100% 97%) -->
+    <color name="on_primary">@color/primary_foreground</color>
+    <color name="primary_dark">#1A4559</color>
+    <color name="primary_variant">#3B7F9E</color>
+
+    <!-- Secondary / Tonal colors -->
+    <color name="secondary">#CAE6F4</color> <!-- hsl(201 57% 88%) -->
+    <color name="secondary_foreground">#404C52</color> <!-- hsl(198 19% 31%) -->
+    <color name="on_secondary">@color/secondary_foreground</color>
+    <color name="secondary_variant">#98CBE2</color> <!-- A slightly darker variant of secondary -->
+
+    
+    <color name="muted">#DDE4E8</color> <!-- hsl(201 24% 88%) -->
+    <color name="muted_foreground">#58656B</color> <!-- hsl(203 7% 37%) -->
+
+    <color name="accent">#C3D3FD</color> <!-- hsl(223 94% 87%) -->
+    <color name="accent_foreground">#364A6B</color> <!-- hsl(221 33% 32%) -->
+
+    <color name="destructive">#A63635</color> <!-- hsl(1 51% 44%) -->
+    <color name="destructive_foreground">#FFFFFF</color> <!-- hsl(0 0% 100%) -->
+
+    <color name="border">#A6B4BC</color> <!-- hsl(201 9% 69%) -->
+    <color name="input">#A6B4BC</color>
+    
+    <!-- Misc Mappings for Android Theme Elements -->
+    <color name="surface">@color/background</color>
+    <color name="on_surface">@color/foreground</color>
+    <color name="on_surface_variant">@color/muted_foreground</color>
+    <color name="surface_variant">@color/muted</color>
+
+    <!-- Misc -->
+    <color name="card_shadow">#0A000000</color>
+    <color name="divider">@color/border</color>
+    <color name="text_primary">@color/foreground</color>
+    <color name="text_secondary">@color/muted_foreground</color>
+    <color name="text_hint">@color/muted_foreground</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    
+    <!-- Darker Alpha ripple for light theme -->
+    <color name="ripple_color">#1F000000</color> 
+    <color name="overlay_dark">#80000000</color>
+
+    <!-- Shimmer -->
+    <color name="shimmer_base">@color/muted</color>
+    <color name="shimmer_highlight">@color/card</color>
+
+    <!-- Status badge colors (keeping these from original as they map well to states) -->
+    <color name="status_lost">#EF4444</color>
+    <color name="status_lost_bg">#FEF2F2</color>
+    <color name="status_lost_text">#DC2626</color>
+    <color name="status_found">#22C55E</color>
+    <color name="status_found_bg">#F0FDF4</color>
+    <color name="status_found_text">#16A34A</color>
+
+    <!-- Keep Original gradients to avoid breaking previous layout elements if used elsewhere -->
+    <color name="gradient_start">@color/primary</color>
+    <color name="gradient_center">#3B7F9E</color>
+    <color name="gradient_end">#1A4559</color>
+    <color name="btn_gradient_start">@color/primary</color>
+    <color name="btn_gradient_end">#3B7F9E</color>
+    <color name="fab_background">@color/primary</color>
+    <color name="fab_icon">@color/primary_foreground</color>
+
+</resources>

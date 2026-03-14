@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="card_radius_large">24dp</dimen>
+    <dimen name="card_elevation">12dp</dimen>
+
+    <!-- Specific demo colors matching the React tailwind classes -->
+    <color name="spotlight_bg">#09090b</color>
+    <color name="spotlight_card_bg">#09090b</color>
+    <color name="spotlight_glow">#406366F1</color> <!-- indigo-500/25 -->
+    
+    <!-- Status vectors -->
+    <color name="scan_granted">#10B981</color> <!-- emerald-500 -->
+    <color name="scan_granted_bg">#1A10B981</color>
+    <color name="scan_denied">#F43F5E</color> <!-- rose-500 -->
+    <color name="scan_denied_bg">#1AF43F5E</color>
+    <color name="scan_idle">#3F3F46</color> <!-- zinc-700 -->
+    
+    <!-- White text variations -->
+    <color name="zinc_300">#D4D4D8</color>
+    <color name="zinc_400">#A1A1AA</color>
+    <color name="zinc_500">#71717A</color>
+</resources>

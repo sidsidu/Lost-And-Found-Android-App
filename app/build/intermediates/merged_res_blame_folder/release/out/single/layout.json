@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.example.lostfound.app-mergeReleaseResources-45:/layout/activity_report_lost.xml",
+        "source": "com.example.lostfound.app-main-47:/layout/activity_report_lost.xml"
+    },
+    {
+        "merged": "com.example.lostfound.app-mergeReleaseResources-45:/layout/item_card.xml",
+        "source": "com.example.lostfound.app-main-47:/layout/item_card.xml"
+    },
+    {
+        "merged": "com.example.lostfound.app-mergeReleaseResources-45:/layout/activity_report_found.xml",
+        "source": "com.example.lostfound.app-main-47:/layout/activity_report_found.xml"
+    },
+    {
+        "merged": "com.example.lostfound.app-mergeReleaseResources-45:/layout/activity_item_detail.xml",
+        "source": "com.example.lostfound.app-main-47:/layout/activity_item_detail.xml"
+    },
+    {
+        "merged": "com.example.lostfound.app-mergeReleaseResources-45:/layout/bottom_sheet_report.xml",
+        "source": "com.example.lostfound.app-main-47:/layout/bottom_sheet_report.xml"
+    },
+    {
+        "merged": "com.example.lostfound.app-mergeReleaseResources-45:/layout/activity_spotlight_demo.xml",
+        "source": "com.example.lostfound.app-main-47:/layout/activity_spotlight_demo.xml"
+    },
+    {
+        "merged": "com.example.lostfound.app-mergeReleaseResources-45:/layout/activity_main.xml",
+        "source": "com.example.lostfound.app-main-47:/layout/activity_main.xml"
+    }
+]
