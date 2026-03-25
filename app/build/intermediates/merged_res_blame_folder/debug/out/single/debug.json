@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_image_upload.xml"
     },
     {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\drawable_bg_circle_white.xml.flat",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_circle_white.xml"
+    },
+    {
         "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\drawable_bg_gradient_header.xml.flat",
         "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_gradient_header.xml"
     },
@@ -48,20 +52,20 @@
         "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_gradient_scrim.xml"
     },
     {
-        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\drawable_bg_card_glow.xml.flat",
-        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_card_glow.xml"
-    },
-    {
         "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\layout_bottom_sheet_report.xml.flat",
         "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\bottom_sheet_report.xml"
     },
     {
-        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\drawable_bg_image_placeholder.xml.flat",
-        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_image_placeholder.xml"
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\drawable_bg_card_glow.xml.flat",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_card_glow.xml"
     },
     {
         "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\anim_layout_animation_fall_down.xml.flat",
         "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\anim\\layout_animation_fall_down.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\drawable_bg_image_placeholder.xml.flat",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\drawable\\bg_image_placeholder.xml"
     },
     {
         "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\xml_file_paths.xml.flat",
@@ -92,12 +96,12 @@
         "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_main.xml"
     },
     {
-        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\layout_activity_spotlight_demo.xml.flat",
-        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_spotlight_demo.xml"
-    },
-    {
         "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\anim_slide_out_left.xml.flat",
         "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\anim\\slide_out_left.xml"
+    },
+    {
+        "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\layout_activity_spotlight_demo.xml.flat",
+        "source": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-main-48:\\layout\\activity_spotlight_demo.xml"
     },
     {
         "merged": "C:\\Users\\Sid\\.gradle\\daemon\\8.5\\com.example.lostfound.app-merged_res-46:\\anim_item_fall_down.xml.flat",

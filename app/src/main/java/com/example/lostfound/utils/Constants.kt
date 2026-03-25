@@ -12,13 +12,14 @@ object Constants {
     /** Name of the Firestore collection that stores all items */
     const val COLLECTION_ITEMS = "items"
 
-    // ── ImgBB (Free Image Hosting) ─────────────────────────────
+    // ── Cloudinary (Free Image Hosting) ─────────────────────────
     // SETUP:
-    // 1. Go to https://imgbb.com/ and create a free account
-    // 2. Go to https://api.imgbb.com/ and get your free API key
-    // 3. Replace the placeholder below with your API key
-    const val IMGBB_API_KEY = "29690ef6bbc9e0b7b452015dca85c9ab"
-    const val IMGBB_UPLOAD_URL = "https://api.imgbb.com/1/upload"
+    // 1. Create a free account at https://cloudinary.com/
+    // 2. Go to Dashboard and copy your Cloud Name
+    // 3. Go to Settings > Upload > Add an Upload Preset (Signing Mode: Unsigned)
+    const val CLOUDINARY_CLOUD_NAME = "dlwimmxrk"
+    const val CLOUDINARY_UPLOAD_PRESET = "lostandfound"
+    const val CLOUDINARY_UPLOAD_URL = "https://api.cloudinary.com/v1_1/$CLOUDINARY_CLOUD_NAME/image/upload"
 
     // ── Item Status Values ──────────────────────────────────────
     const val STATUS_LOST = "lost"

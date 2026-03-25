@@ -38,6 +38,9 @@ class MainActivity : AppCompatActivity() {
     // RecyclerView adapter
     private lateinit var itemAdapter: ItemAdapter
 
+    // Expandable FAB state tracker
+    private var isFabExpanded = false
+
     // ═══════════════════════════════════════════════════════════════
     // LIFECYCLE
     // ═══════════════════════════════════════════════════════════════
@@ -87,17 +90,36 @@ class MainActivity : AppCompatActivity() {
     // ═══════════════════════════════════════════════════════════════
 
     private fun setupClickListeners() {
-        // FAB opens the Bottom Sheet Menu
+        // FAB toggles Expandable Menu
         binding.fabReport.setOnClickListener {
-            showReportBottomSheet()
+            toggleFabMenu()
         }
 
-        // Hide FAB on scroll down, show on scroll up for cleaner UI
+        binding.fabOverlay.setOnClickListener {
+            if (isFabExpanded) toggleFabMenu()
+        }
+
+        binding.fabReportLost.setOnClickListener {
+            toggleFabMenu()
+            startActivity(Intent(this, ReportLostActivity::class.java))
+        }
+
+        binding.fabReportFound.setOnClickListener {
+            toggleFabMenu()
+            startActivity(Intent(this, ReportFoundActivity::class.java))
+        }
+
+        // Hide UI on scroll
         binding.rvItems.addOnScrollListener(object : androidx.recyclerview.widget.RecyclerView.OnScrollListener() {
             override fun onScrolled(recyclerView: androidx.recyclerview.widget.RecyclerView, dx: Int, dy: Int) {
+                // Collapse menu if user starts scrolling while it is open
+                if (dy != 0 && isFabExpanded) {
+                    toggleFabMenu()
+                }
+                
                 if (dy > 0 && binding.fabReport.isExtended) {
                     binding.fabReport.shrink()
-                } else if (dy < 0 && !binding.fabReport.isExtended) {
+                } else if (dy < 0 && !binding.fabReport.isExtended && !isFabExpanded) {
                     binding.fabReport.extend()
                 }
             }
@@ -105,24 +127,50 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Shows a modern bottom sheet menu with options to Report Lost or Found items.
+     * Smoothly animates the sub-FABs upwards while rotating the main '+' icon 
+     * to become an 'x' (cancel) button.
      */
-    private fun showReportBottomSheet() {
-        val bottomSheetDialog = com.google.android.material.bottomsheet.BottomSheetDialog(this, R.style.Widget_LostFound_BottomSheet)
-        val sheetBinding = com.example.lostfound.databinding.BottomSheetReportBinding.inflate(layoutInflater)
-        bottomSheetDialog.setContentView(sheetBinding.root)
+    private fun toggleFabMenu() {
+        isFabExpanded = !isFabExpanded
 
-        sheetBinding.btnSheetReportLost.setOnClickListener {
-            bottomSheetDialog.dismiss()
-            startActivity(Intent(this, ReportLostActivity::class.java))
+        if (isFabExpanded) {
+            // 1. Expand Mode
+            
+            // Shrink the main FAB down to just a circle, then rotate 45 deg to make an 'x'
+            binding.fabReport.shrink()
+            binding.fabReport.animate().rotation(45f).setDuration(250).start()
+            
+            // Fade in dim overlay
+            binding.fabOverlay.visibility = View.VISIBLE
+            binding.fabOverlay.animate().alpha(1f).setDuration(250).start()
+
+            // Pop up the buttons
+            binding.fabReportLost.visibility = View.VISIBLE
+            binding.fabReportLost.animate().translationY(0f).alpha(1f).setDuration(250).start()
+
+            binding.fabReportFound.visibility = View.VISIBLE
+            binding.fabReportFound.animate().translationY(0f).alpha(1f).setDuration(250).start()
+        } else {
+            // 2. Collapse Mode
+            
+            // Restore main FAB text and un-rotate back to '+'
+            binding.fabReport.extend()
+            binding.fabReport.animate().rotation(0f).setDuration(250).start()
+
+            // Fade out overlay
+            binding.fabOverlay.animate().alpha(0f).setDuration(250).withEndAction { 
+                binding.fabOverlay.visibility = View.GONE 
+            }.start()
+
+            // Slide the buttons back down
+            binding.fabReportLost.animate().translationY(50f).alpha(0f).setDuration(250).withEndAction { 
+                binding.fabReportLost.visibility = View.GONE 
+            }.start()
+
+            binding.fabReportFound.animate().translationY(50f).alpha(0f).setDuration(250).withEndAction { 
+                binding.fabReportFound.visibility = View.GONE 
+            }.start()
         }
-
-        sheetBinding.btnSheetReportFound.setOnClickListener {
-            bottomSheetDialog.dismiss()
-            startActivity(Intent(this, ReportFoundActivity::class.java))
-        }
-
-        bottomSheetDialog.show()
     }
 
     // ═══════════════════════════════════════════════════════════════

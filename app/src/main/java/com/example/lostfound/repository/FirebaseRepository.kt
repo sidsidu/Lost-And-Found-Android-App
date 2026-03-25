@@ -15,9 +15,11 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow
 import kotlinx.coroutines.tasks.await
 import kotlinx.coroutines.withContext
-import okhttp3.FormBody
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.MultipartBody
 import okhttp3.OkHttpClient
 import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.ByteArrayOutputStream
 import java.io.InputStream
 import java.util.concurrent.TimeUnit
@@ -48,7 +50,7 @@ class FirebaseRepository {
     // Reference to the "items" collection
     private val itemsCollection = firestore.collection(Constants.COLLECTION_ITEMS)
 
-    // OkHttp client for ImgBB API requests
+    // OkHttp client for Cloudinary API requests
     private val httpClient = OkHttpClient.Builder()
         .connectTimeout(30, TimeUnit.SECONDS)
         .writeTimeout(60, TimeUnit.SECONDS)
@@ -56,54 +58,84 @@ class FirebaseRepository {
         .build()
 
     // ═══════════════════════════════════════════════════════════════
-    // IMAGE UPLOAD (via ImgBB — completely FREE)
+    // IMAGE UPLOAD (Cloudinary Free API)
     // ═══════════════════════════════════════════════════════════════
 
     /**
-     * Uploads an image to ImgBB and returns the public display URL.
-     *
-     * How it works:
-     * 1. Read the image from the content URI
-     * 2. Encode the image bytes to Base64
-     * 3. POST the Base64 string to ImgBB's API
-     * 4. Parse the JSON response to get the image URL
-     *
-     * ImgBB is completely FREE — no credit card or billing needed.
-     * Just sign up at https://imgbb.com/ and get your API key
-     * from https://api.imgbb.com/
-     *
-     * @param context Android context to access the ContentResolver
-     * @param imageUri Local URI of the image file
-     * @return Public URL of the uploaded image
-     * @throws Exception if the upload fails
+     * Uploads an image to Cloudinary and returns the public download URL.
      */
     suspend fun uploadImage(context: Context, imageUri: Uri): String {
         return withContext(Dispatchers.IO) {
-            // Step 1: Read image bytes from the content URI
+            // Step 1: Read image and compress it
+            // Parse EXIF for rotation first
+            var rotationDegrees = 0f
+            context.contentResolver.openInputStream(imageUri)?.use { exifStream ->
+                val exif = android.media.ExifInterface(exifStream)
+                rotationDegrees = when (exif.getAttributeInt(android.media.ExifInterface.TAG_ORIENTATION, android.media.ExifInterface.ORIENTATION_NORMAL)) {
+                    android.media.ExifInterface.ORIENTATION_ROTATE_90 -> 90f
+                    android.media.ExifInterface.ORIENTATION_ROTATE_180 -> 180f
+                    android.media.ExifInterface.ORIENTATION_ROTATE_270 -> 270f
+                    else -> 0f
+                }
+            }
+
             val inputStream: InputStream = context.contentResolver.openInputStream(imageUri)
                 ?: throw Exception("Cannot read the selected image")
 
-            val byteArray = inputStream.use { stream ->
-                val buffer = ByteArrayOutputStream()
-                val data = ByteArray(4096)
-                var bytesRead: Int
-                while (stream.read(data).also { bytesRead = it } != -1) {
-                    buffer.write(data, 0, bytesRead)
-                }
-                buffer.toByteArray()
+            val originalBitmap = android.graphics.BitmapFactory.decodeStream(inputStream)
+            inputStream.close()
+
+            if (originalBitmap == null) throw Exception("Failed to decode image")
+
+            // Scale down to max 1024x1024
+            val maxDim = 1024f
+            val scale = java.lang.Math.min(maxDim / originalBitmap.width, maxDim / originalBitmap.height)
+            
+            var finalBitmap = if (scale < 1) {
+                android.graphics.Bitmap.createScaledBitmap(
+                    originalBitmap,
+                    (originalBitmap.width * scale).toInt(),
+                    (originalBitmap.height * scale).toInt(),
+                    true
+                )
+            } else {
+                originalBitmap
             }
 
-            // Step 2: Encode to Base64
-            val base64Image = Base64.encodeToString(byteArray, Base64.DEFAULT)
+            // Apply EXIF rotation if necessary
+            if (rotationDegrees != 0f) {
+                val matrix = android.graphics.Matrix()
+                matrix.postRotate(rotationDegrees)
+                val rotatedBitmap = android.graphics.Bitmap.createBitmap(
+                    finalBitmap, 0, 0, finalBitmap.width, finalBitmap.height, matrix, true
+                )
+                if (rotatedBitmap != finalBitmap) {
+                    if (finalBitmap != originalBitmap) finalBitmap.recycle()
+                    finalBitmap = rotatedBitmap
+                }
+            }
 
-            // Step 3: Build the POST request to ImgBB
-            val requestBody = FormBody.Builder()
-                .add("key", Constants.IMGBB_API_KEY)
-                .add("image", base64Image)
+            val buffer = ByteArrayOutputStream()
+            // Compress to JPEG with 80% quality
+            finalBitmap.compress(android.graphics.Bitmap.CompressFormat.JPEG, 80, buffer)
+            val byteArray = buffer.toByteArray()
+
+            if (finalBitmap != originalBitmap) finalBitmap.recycle()
+            originalBitmap.recycle()
+
+            // Step 2: Build the POST request to Cloudinary
+            // Sending raw bytes via MultipartBody completely avoids filename and base64 parsing issues.
+            val mediaType = "image/jpeg".toMediaTypeOrNull()
+            val requestFile = byteArray.toRequestBody(mediaType)
+
+            val requestBody = MultipartBody.Builder()
+                .setType(MultipartBody.FORM)
+                .addFormDataPart("file", "upload.jpg", requestFile)
+                .addFormDataPart("upload_preset", Constants.CLOUDINARY_UPLOAD_PRESET)
                 .build()
 
             val request = Request.Builder()
-                .url(Constants.IMGBB_UPLOAD_URL)
+                .url(Constants.CLOUDINARY_UPLOAD_URL)
                 .post(requestBody)
                 .build()
 
@@ -111,38 +143,32 @@ class FirebaseRepository {
             val response = httpClient.newCall(request).execute()
 
             if (!response.isSuccessful) {
-                throw Exception("Image upload failed (HTTP ${response.code})")
+                val errorBody = response.body?.string() ?: "No error body"
+                throw Exception("Cloudinary Error HTTP ${response.code}: $errorBody")
             }
 
             // Step 5: Parse JSON response to extract image URL
             val responseBody = response.body?.string()
-                ?: throw Exception("Empty response from ImgBB")
+                ?: throw Exception("Empty response from Cloudinary")
 
-            val imgbbResponse = Gson().fromJson(responseBody, ImgBBResponse::class.java)
+            val cloudinaryResponse = Gson().fromJson(responseBody, CloudinaryResponse::class.java)
 
-            if (imgbbResponse.success) {
-                imgbbResponse.data.displayUrl
+            if (cloudinaryResponse.secureUrl != null) {
+                cloudinaryResponse.secureUrl
             } else {
-                throw Exception("ImgBB upload failed")
+                throw Exception("Cloudinary upload failed")
             }
         }
     }
 
     // ═══════════════════════════════════════════════════════════════
-    // ImgBB API Response Models
+    // Cloudinary API Response Models
     // ═══════════════════════════════════════════════════════════════
 
-    /** Top-level response from ImgBB API */
-    private data class ImgBBResponse(
-        val success: Boolean,
-        val data: ImgBBData
-    )
-
-    /** Image data inside the ImgBB response */
-    private data class ImgBBData(
-        val url: String,
-        @SerializedName("display_url")
-        val displayUrl: String
+    /** Cloudinary API Response */
+    private data class CloudinaryResponse(
+        @SerializedName("secure_url")
+        val secureUrl: String?
     )
 
     // ═══════════════════════════════════════════════════════════════

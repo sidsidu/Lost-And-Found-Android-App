@@ -261,7 +261,11 @@ class ReportLostActivity : AppCompatActivity() {
         // Error messages
         viewModel.errorMessage.observe(this) { error ->
             error?.let {
-                Toast.makeText(this, it, Toast.LENGTH_LONG).show()
+                MaterialAlertDialogBuilder(this)
+                    .setTitle("Upload Error")
+                    .setMessage(error)
+                    .setPositiveButton("OK", null)
+                    .show()
                 viewModel.clearError()
             }
         }

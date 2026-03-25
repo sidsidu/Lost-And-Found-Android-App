@@ -42,7 +42,16 @@ public final class ActivityMainBinding implements ViewBinding {
   public final EditText etSearch;
 
   @NonNull
+  public final View fabOverlay;
+
+  @NonNull
   public final ExtendedFloatingActionButton fabReport;
+
+  @NonNull
+  public final ExtendedFloatingActionButton fabReportFound;
+
+  @NonNull
+  public final ExtendedFloatingActionButton fabReportLost;
 
   @NonNull
   public final LinearLayout layoutEmpty;
@@ -58,16 +67,21 @@ public final class ActivityMainBinding implements ViewBinding {
 
   private ActivityMainBinding(@NonNull CoordinatorLayout rootView, @NonNull Chip chipAll,
       @NonNull Chip chipFound, @NonNull ChipGroup chipGroupFilter, @NonNull Chip chipLost,
-      @NonNull EditText etSearch, @NonNull ExtendedFloatingActionButton fabReport,
-      @NonNull LinearLayout layoutEmpty, @NonNull ProgressBar progressBar,
-      @NonNull RecyclerView rvItems, @NonNull TextView tvTitle) {
+      @NonNull EditText etSearch, @NonNull View fabOverlay,
+      @NonNull ExtendedFloatingActionButton fabReport,
+      @NonNull ExtendedFloatingActionButton fabReportFound,
+      @NonNull ExtendedFloatingActionButton fabReportLost, @NonNull LinearLayout layoutEmpty,
+      @NonNull ProgressBar progressBar, @NonNull RecyclerView rvItems, @NonNull TextView tvTitle) {
     this.rootView = rootView;
     this.chipAll = chipAll;
     this.chipFound = chipFound;
     this.chipGroupFilter = chipGroupFilter;
     this.chipLost = chipLost;
     this.etSearch = etSearch;
+    this.fabOverlay = fabOverlay;
     this.fabReport = fabReport;
+    this.fabReportFound = fabReportFound;
+    this.fabReportLost = fabReportLost;
     this.layoutEmpty = layoutEmpty;
     this.progressBar = progressBar;
     this.rvItems = rvItems;
@@ -131,9 +145,27 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.fabOverlay;
+      View fabOverlay = ViewBindings.findChildViewById(rootView, id);
+      if (fabOverlay == null) {
+        break missingId;
+      }
+
       id = R.id.fabReport;
       ExtendedFloatingActionButton fabReport = ViewBindings.findChildViewById(rootView, id);
       if (fabReport == null) {
+        break missingId;
+      }
+
+      id = R.id.fabReportFound;
+      ExtendedFloatingActionButton fabReportFound = ViewBindings.findChildViewById(rootView, id);
+      if (fabReportFound == null) {
+        break missingId;
+      }
+
+      id = R.id.fabReportLost;
+      ExtendedFloatingActionButton fabReportLost = ViewBindings.findChildViewById(rootView, id);
+      if (fabReportLost == null) {
         break missingId;
       }
 
@@ -162,8 +194,8 @@ public final class ActivityMainBinding implements ViewBinding {
       }
 
       return new ActivityMainBinding((CoordinatorLayout) rootView, chipAll, chipFound,
-          chipGroupFilter, chipLost, etSearch, fabReport, layoutEmpty, progressBar, rvItems,
-          tvTitle);
+          chipGroupFilter, chipLost, etSearch, fabOverlay, fabReport, fabReportFound, fabReportLost,
+          layoutEmpty, progressBar, rvItems, tvTitle);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
