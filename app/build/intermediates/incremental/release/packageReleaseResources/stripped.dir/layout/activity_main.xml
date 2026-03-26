@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     activity_main.xml — MODERNIZED Home Screen
-    • Gradient header with animated title
-    • Search bar
-    • Filter chips
-    • RecyclerView with animated cards
-    • FAB for reporting (replaces two top buttons)
-    • Empty state
+    • Flat white header
+    • Soft grey search bar
+    • Fully rounded Filter chips
+    • Clean spacing
 -->
 <androidx.coordinatorlayout.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -23,71 +21,69 @@
         android:orientation="vertical">
 
         <!-- ═══════════════════════════════════════════════════════ -->
-        <!-- GRADIENT HEADER                                        -->
+        <!-- CLEAN HEADER                                           -->
         <!-- ═══════════════════════════════════════════════════════ -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_gradient_header"
+            android:background="@color/surface"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="48dp"
-            android:paddingBottom="24dp">
+            android:paddingHorizontal="24dp"
+            android:paddingTop="64dp"
+            android:paddingBottom="16dp">
 
             <!-- App title + subtitle -->
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-black"
+                android:fontFamily="sans-serif-medium"
                 android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="30sp"
+                android:textColor="@color/foreground"
+                android:textSize="32sp"
                 android:letterSpacing="-0.02" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
-                android:alpha="0.85"
+                android:layout_marginTop="8dp"
                 android:text="Find what you lost, return what you found"
-                android:textColor="@color/white"
-                android:textSize="14sp" />
+                android:textColor="@color/muted_foreground"
+                android:textSize="15sp" />
 
-            <!-- Search Bar — frosted glass look -->
+            <!-- Search Bar — Soft grey input -->
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                app:cardCornerRadius="16dp"
+                android:layout_height="52dp"
+                android:layout_marginTop="24dp"
+                app:cardCornerRadius="12dp"
                 app:cardElevation="0dp"
-                app:cardBackgroundColor="#33FFFFFF">
+                app:cardBackgroundColor="@color/secondary">
 
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:gravity="center_vertical"
                     android:paddingHorizontal="16dp">
 
                     <ImageView
-                        android:layout_width="20dp"
-                        android:layout_height="20dp"
-                        android:alpha="0.7"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
                         android:contentDescription="Search"
                         android:src="@android:drawable/ic_menu_search"
-                        android:tint="@color/white" />
+                        app:tint="@color/muted_foreground" />
 
                     <EditText
                         android:id="@+id/etSearch"
                         android:layout_width="0dp"
-                        android:layout_height="48dp"
+                        android:layout_height="match_parent"
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
                         android:background="@android:color/transparent"
                         android:hint="@string/search_items"
                         android:inputType="text"
-                        android:textColor="@color/white"
-                        android:textColorHint="#99FFFFFF"
+                        android:textColor="@color/foreground"
+                        android:textColorHint="@color/muted_foreground"
                         android:textSize="15sp" />
 
                 </LinearLayout>
@@ -103,9 +99,9 @@
             android:id="@+id/chipGroupFilter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingHorizontal="16dp"
-            android:paddingTop="14dp"
-            android:paddingBottom="6dp"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="16dp"
             app:selectionRequired="true"
             app:singleSelection="true">
 
@@ -146,8 +142,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:clipToPadding="false"
-                android:paddingTop="4dp"
-                android:paddingBottom="80dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="100dp"
                 tools:listitem="@layout/item_card" />
 
             <!-- Loading spinner -->
@@ -173,15 +169,15 @@
                 <ImageView
                     android:layout_width="80dp"
                     android:layout_height="80dp"
-                    android:alpha="0.3"
+                    android:alpha="0.2"
                     android:contentDescription="@string/no_items_found"
                     android:src="@android:drawable/ic_menu_search"
-                    android:tint="@color/text_secondary" />
+                    app:tint="@color/muted_foreground" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
+                    android:layout_marginTop="24dp"
                     android:fontFamily="sans-serif-medium"
                     android:text="@string/no_items_found"
                     android:textColor="@color/text_secondary"
@@ -190,7 +186,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
+                    android:layout_marginTop="8dp"
                     android:gravity="center"
                     android:text="@string/no_items_description"
                     android:textColor="@color/text_hint"
@@ -203,6 +199,60 @@
     </LinearLayout>
 
     <!-- ═══════════════════════════════════════════════════════ -->
+    <!-- FAB OVERLAY MENU (Initially Hidden)                    -->
+    <!-- ═══════════════════════════════════════════════════════ -->
+    <View
+        android:id="@+id/fabOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#80000000"
+        android:elevation="6dp"
+        android:visibility="gone"
+        android:alpha="0" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabReportLost"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="176dp"
+        android:text="I lost something"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.01"
+        app:backgroundTint="@color/white"
+        app:icon="@android:drawable/ic_menu_help"
+        app:iconTint="@color/primary"
+        app:shapeAppearance="@style/ShapeSmall"
+        android:elevation="8dp"
+        android:visibility="gone"
+        android:alpha="0"
+        android:translationY="50dp"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/fabReportFound"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="112dp"
+        android:text="I found something"
+        android:textAllCaps="false"
+        android:textColor="@color/primary"
+        android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.01"
+        app:backgroundTint="@color/white"
+        app:icon="@android:drawable/ic_menu_search"
+        app:iconTint="@color/primary"
+        app:shapeAppearance="@style/ShapeSmall"
+        android:elevation="8dp"
+        android:visibility="gone"
+        android:alpha="0"
+        android:translationY="50dp"/>
+
+    <!-- ═══════════════════════════════════════════════════════ -->
     <!-- FLOATING ACTION BUTTON                                 -->
     <!-- ═══════════════════════════════════════════════════════ -->
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -210,16 +260,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="32dp"
         android:contentDescription="Report an item"
         android:text="Report"
         android:textAllCaps="false"
         android:textColor="@color/white"
         android:fontFamily="sans-serif-medium"
+        android:letterSpacing="0.01"
         app:backgroundTint="@color/primary"
         app:icon="@android:drawable/ic_input_add"
         app:iconTint="@color/white"
-        app:shapeAppearance="@style/ShapeMedium" />
+        app:shapeAppearance="@style/ShapeSmall" /> <!-- ShapeSmall is now 50dp rounded -->
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

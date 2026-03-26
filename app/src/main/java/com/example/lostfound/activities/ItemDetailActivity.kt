@@ -12,26 +12,13 @@ import com.example.lostfound.databinding.ActivityItemDetailBinding
 import com.example.lostfound.utils.Constants
 import com.example.lostfound.viewmodels.ItemViewModel
 
-/**
- * ItemDetailActivity — Displays full details of a lost or found item.
- *
- * Features:
- * • Full-bleed hero image with gradient scrim
- * • Floating back button
- * • Status badge overlay ("LOST" red / "FOUND" green)
- * • Elevated card with description, location, date, contact
- * • "Call Contact" button that opens the phone dialer
- *
- * Receives the item ID via Intent extra and fetches it from Firestore.
- */
+// displays the full details of a clicked item
 class ItemDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityItemDetailBinding
     private val viewModel: ItemViewModel by viewModels()
 
-    // ═══════════════════════════════════════════════════════════════
-    // LIFECYCLE
-    // ═══════════════════════════════════════════════════════════════
+    // sets up the screen layout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -63,7 +50,7 @@ class ItemDetailActivity : AppCompatActivity() {
                 return@observe
             }
 
-            // ─── Populate UI ─────────────────────────────────────────
+            // fill screen with data
 
             // Animate card entrance
             binding.cardDetail.startAnimation(
@@ -117,7 +104,7 @@ class ItemDetailActivity : AppCompatActivity() {
             // Contact phone
             binding.tvContact.text = item.contactPhone
 
-            // ─── Call Contact Button ─────────────────────────────────
+            // handles call button
             binding.btnCallContact.setOnClickListener {
                 // Opens the phone dialer with the contact number pre-filled
                 val dialIntent = Intent(Intent.ACTION_DIAL).apply {

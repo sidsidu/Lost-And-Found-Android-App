@@ -21,14 +21,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-/**
- * ReportFoundActivity — Form to report a found item.
- *
- * Identical flow to ReportLostActivity but:
- * • Uses "foundLocation" instead of "lostLocation"
- * • Includes an optional "dropOffLocation" field
- * • Saves with status = "found"
- */
+// form screen where users post found items
 class ReportFoundActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityReportFoundBinding
@@ -38,9 +31,7 @@ class ReportFoundActivity : AppCompatActivity() {
     private var selectedImageUri: Uri? = null
     private val calendar = Calendar.getInstance()
 
-    // ═══════════════════════════════════════════════════════════════
-    // ACTIVITY RESULT LAUNCHERS
-    // ═══════════════════════════════════════════════════════════════
+    // permission handlers
 
     private val cameraLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
@@ -60,9 +51,7 @@ class ReportFoundActivity : AppCompatActivity() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // LIFECYCLE
-    // ═══════════════════════════════════════════════════════════════
+    // sets up the screen layout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -73,9 +62,7 @@ class ReportFoundActivity : AppCompatActivity() {
         observeViewModel()
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // CLICK LISTENERS
-    // ═══════════════════════════════════════════════════════════════
+    // connects buttons to actions
 
     private fun setupClickListeners() {
         binding.btnBack.setOnClickListener { finish() }
@@ -84,9 +71,7 @@ class ReportFoundActivity : AppCompatActivity() {
         binding.btnSubmit.setOnClickListener { validateAndSubmit() }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // IMAGE SELECTION
-    // ═══════════════════════════════════════════════════════════════
+    // shows pop-up asking user to pick camera or gallery
 
     private fun showImageSourceDialog() {
         val options = arrayOf(
@@ -122,9 +107,7 @@ class ReportFoundActivity : AppCompatActivity() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // DATE PICKER
-    // ═══════════════════════════════════════════════════════════════
+    // opens calendar so user can pick a date
 
     private fun showDatePicker() {
         DatePickerDialog(
@@ -140,9 +123,7 @@ class ReportFoundActivity : AppCompatActivity() {
         ).show()
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // VALIDATION & SUBMISSION
-    // ═══════════════════════════════════════════════════════════════
+    // checks if user filled the form correctly before sending
 
     private fun validateAndSubmit() {
         var isValid = true
@@ -204,9 +185,7 @@ class ReportFoundActivity : AppCompatActivity() {
         )
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // OBSERVE VIEWMODEL
-    // ═══════════════════════════════════════════════════════════════
+    // updates screen when data changes
 
     private fun observeViewModel() {
         viewModel.isUploading.observe(this) { isUploading ->

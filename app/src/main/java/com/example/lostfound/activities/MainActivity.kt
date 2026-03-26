@@ -15,18 +15,7 @@ import com.example.lostfound.databinding.ActivityMainBinding
 import com.example.lostfound.utils.Constants
 import com.example.lostfound.viewmodels.ItemViewModel
 
-/**
- * MainActivity — Home Screen of the Lost & Found app.
- *
- * Displays:
- * • Gradient header with app title and search bar
- * • Filter chips (All / Lost / Found)
- * • Two large report buttons (Lost & Found)
- * • RecyclerView showing all posted items
- * • Empty state when no items exist
- *
- * Uses ViewBinding for layout access and ItemViewModel for data.
- */
+// main screen showing items and search
 class MainActivity : AppCompatActivity() {
 
     // ViewBinding — generated from activity_main.xml
@@ -41,9 +30,7 @@ class MainActivity : AppCompatActivity() {
     // Expandable FAB state tracker
     private var isFabExpanded = false
 
-    // ═══════════════════════════════════════════════════════════════
-    // LIFECYCLE
-    // ═══════════════════════════════════════════════════════════════
+    // setup activity
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,14 +44,7 @@ class MainActivity : AppCompatActivity() {
         observeViewModel()
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // RECYCLERVIEW SETUP
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Initializes the RecyclerView with a LinearLayoutManager and
-     * the ItemAdapter. Tapping a card opens the detail screen.
-     */
+    // setup list
     private fun setupRecyclerView() {
         itemAdapter = ItemAdapter { item ->
             // Navigate to Item Detail screen, passing the item ID
@@ -85,9 +65,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // CLICK LISTENERS & SCROLL
-    // ═══════════════════════════════════════════════════════════════
+    // handle clicks
 
     private fun setupClickListeners() {
         // FAB toggles Expandable Menu
@@ -126,10 +104,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    /**
-     * Smoothly animates the sub-FABs upwards while rotating the main '+' icon 
-     * to become an 'x' (cancel) button.
-     */
+    // show or hide the fab menu
     private fun toggleFabMenu() {
         isFabExpanded = !isFabExpanded
 
@@ -173,14 +148,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // SEARCH BAR
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Attaches a TextWatcher to the search input that filters
-     * items by name in real-time as the user types.
-     */
+    // handle search
     private fun setupSearchBar() {
         binding.etSearch.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
@@ -191,14 +159,7 @@ class MainActivity : AppCompatActivity() {
         })
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // FILTER CHIPS
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Sets up the Material Chip group so tapping a chip reloads
-     * items filtered by status (or all items).
-     */
+    // handle filters
     private fun setupFilterChips() {
         binding.chipGroupFilter.setOnCheckedStateChangeListener { _, checkedIds ->
             when {
@@ -212,16 +173,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // OBSERVE VIEWMODEL
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Observes LiveData from the ViewModel:
-     * • items → submits list to adapter
-     * • isLoading → shows/hides progress bar
-     * • Shows empty state when list is empty and not loading
-     */
+    // update ui from viewmodel
     private fun observeViewModel() {
         // Items list
         viewModel.items.observe(this) { items ->

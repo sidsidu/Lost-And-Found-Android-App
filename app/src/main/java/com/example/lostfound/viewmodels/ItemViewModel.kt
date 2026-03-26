@@ -12,23 +12,12 @@ import com.example.lostfound.utils.Constants
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
 
-/**
- * ItemViewModel — ViewModel for the Lost & Found app.
- *
- * Acts as a bridge between the UI (Activities) and the data layer
- * (FirebaseRepository). Exposes LiveData that the UI observes.
- *
- * Uses Kotlin Coroutines + Flow for asynchronous operations.
- */
+// manages data between the ui and firestore
 class ItemViewModel : ViewModel() {
 
     private val repository = FirebaseRepository()
 
-    // ═══════════════════════════════════════════════════════════════
-    // ITEMS LIST
-    // ═══════════════════════════════════════════════════════════════
-
-    /** All items (or filtered items) observed by the RecyclerView */
+    // items shown on screen
     private val _items = MutableLiveData<List<ItemModel>>()
     val items: LiveData<List<ItemModel>> = _items
 
@@ -40,11 +29,7 @@ class ItemViewModel : ViewModel() {
     private val _errorMessage = MutableLiveData<String?>()
     val errorMessage: LiveData<String?> = _errorMessage
 
-    // ═══════════════════════════════════════════════════════════════
-    // UPLOAD STATE
-    // ═══════════════════════════════════════════════════════════════
-
-    /** Whether an upload operation is in progress */
+    // tracks when upload is happening
     private val _isUploading = MutableLiveData(false)
     val isUploading: LiveData<Boolean> = _isUploading
 
@@ -52,16 +37,12 @@ class ItemViewModel : ViewModel() {
     private val _uploadSuccess = MutableLiveData<Boolean>()
     val uploadSuccess: LiveData<Boolean> = _uploadSuccess
 
-    // ═══════════════════════════════════════════════════════════════
-    // SINGLE ITEM (Detail Screen)
-    // ═══════════════════════════════════════════════════════════════
+    // holds the item clicked for the detail screen
 
     private val _selectedItem = MutableLiveData<ItemModel?>()
     val selectedItem: LiveData<ItemModel?> = _selectedItem
 
-    // ═══════════════════════════════════════════════════════════════
-    // CURRENT FILTER STATE
-    // ═══════════════════════════════════════════════════════════════
+    // tracks active filters and searches
 
     private var currentFilter: String? = null // null = "all"
     private var currentSearchQuery: String = ""
@@ -71,14 +52,7 @@ class ItemViewModel : ViewModel() {
         loadAllItems()
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // LOAD ITEMS (Real-time via Flow)
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Subscribes to the real-time stream of ALL items from Firestore.
-     * Results are filtered locally by the current search query.
-     */
+    // gets all items from firestore in real time
     fun loadAllItems() {
         currentFilter = null
         _isLoading.value = true
@@ -96,9 +70,7 @@ class ItemViewModel : ViewModel() {
         }
     }
 
-    /**
-     * Subscribes to items filtered by status ("lost" or "found").
-     */
+    // gets items filtered by lost or found
     fun loadItemsByStatus(status: String) {
         currentFilter = status
         _isLoading.value = true
@@ -141,13 +113,7 @@ class ItemViewModel : ViewModel() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // FETCH SINGLE ITEM (Detail Screen)
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Loads a single item from Firestore by its document ID.
-     */
+    // fetches details for one specific item using its ID
     fun fetchItemById(itemId: String) {
         viewModelScope.launch {
             try {
@@ -158,24 +124,7 @@ class ItemViewModel : ViewModel() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // SUBMIT ITEM (Upload Image → Save Document)
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Uploads the image to ImgBB (free), then saves the item to Firestore.
-     *
-     * @param context Android context (needed to read image bytes)
-     * @param imageUri Local image URI to upload
-     * @param itemName Name of the item
-     * @param description Description of the item
-     * @param status "lost" or "found"
-     * @param lostLocation Location where it was lost (empty for found items)
-     * @param foundLocation Location where it was found (empty for lost items)
-     * @param dropOffLocation Drop-off location (optional, found items only)
-     * @param contactPhone Contact phone number
-     * @param date User-selected date string
-     */
+    // uploads the image to cloudinary and then saves the item text to firestore
     fun submitItem(
         context: Context,
         imageUri: Uri,
@@ -192,7 +141,7 @@ class ItemViewModel : ViewModel() {
 
         viewModelScope.launch {
             try {
-                // Step 1: Upload image to ImgBB (free) → get public URL
+                
                 val imageUrl = repository.uploadImage(context, imageUri)
 
                 // Step 2: Create the ItemModel

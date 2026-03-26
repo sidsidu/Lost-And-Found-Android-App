@@ -13,21 +13,12 @@ import com.example.lostfound.databinding.ItemCardBinding
 import com.example.lostfound.models.ItemModel
 import com.example.lostfound.utils.Constants
 
-/**
- * ItemAdapter — RecyclerView adapter for displaying lost/found items.
- *
- * Uses ListAdapter with DiffUtil for efficient list updates (animated inserts,
- * removals, and moves). Loads images with Glide.
- *
- * @param onItemClick Lambda invoked when a card is tapped, passes the ItemModel
- */
+// populates the list of items for the recycler view
 class ItemAdapter(
     private val onItemClick: (ItemModel) -> Unit
 ) : ListAdapter<ItemModel, ItemAdapter.ItemViewHolder>(ItemDiffCallback()) {
 
-    // ═══════════════════════════════════════════════════════════════
-    // VIEW HOLDER
-    // ═══════════════════════════════════════════════════════════════
+    // prepares individual item cards
 
     inner class ItemViewHolder(
         private val binding: ItemCardBinding
@@ -80,9 +71,7 @@ class ItemAdapter(
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // ADAPTER OVERRIDES
-    // ═══════════════════════════════════════════════════════════════
+    // creates new view holders for the list
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         val binding = ItemCardBinding.inflate(
@@ -97,9 +86,7 @@ class ItemAdapter(
         holder.bind(getItem(position))
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // DIFF CALLBACK — Efficient RecyclerView updates
-    // ═══════════════════════════════════════════════════════════════
+    // helps update the list efficiently when items change
 
     class ItemDiffCallback : DiffUtil.ItemCallback<ItemModel>() {
         override fun areItemsTheSame(old: ItemModel, new: ItemModel): Boolean {

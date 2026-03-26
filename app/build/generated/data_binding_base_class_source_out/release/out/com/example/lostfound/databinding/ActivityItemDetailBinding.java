@@ -4,6 +4,7 @@ package com.example.lostfound.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
@@ -16,7 +17,6 @@ import androidx.viewbinding.ViewBindings;
 import com.example.lostfound.R;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.card.MaterialCardView;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -32,7 +32,7 @@ public final class ActivityItemDetailBinding implements ViewBinding {
   public final MaterialCardView cardDetail;
 
   @NonNull
-  public final FloatingActionButton fabBack;
+  public final ImageButton fabBack;
 
   @NonNull
   public final ImageView ivItemImage;
@@ -69,7 +69,7 @@ public final class ActivityItemDetailBinding implements ViewBinding {
 
   private ActivityItemDetailBinding(@NonNull ScrollView rootView,
       @NonNull MaterialButton btnCallContact, @NonNull MaterialCardView cardDetail,
-      @NonNull FloatingActionButton fabBack, @NonNull ImageView ivItemImage,
+      @NonNull ImageButton fabBack, @NonNull ImageView ivItemImage,
       @NonNull LinearLayout layoutDropOff, @NonNull ProgressBar progressBar,
       @NonNull TextView tvContact, @NonNull TextView tvDate, @NonNull TextView tvDescription,
       @NonNull TextView tvDropOff, @NonNull TextView tvItemName, @NonNull TextView tvLocation,
@@ -131,7 +131,7 @@ public final class ActivityItemDetailBinding implements ViewBinding {
       }
 
       id = R.id.fabBack;
-      FloatingActionButton fabBack = ViewBindings.findChildViewById(rootView, id);
+      ImageButton fabBack = ViewBindings.findChildViewById(rootView, id);
       if (fabBack == null) {
         break missingId;
       }

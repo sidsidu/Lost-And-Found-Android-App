@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
     activity_report_found.xml — MODERNIZED Report Found Item Form
-    Same style as lost form + optional drop-off field
+    Clean white header and consistent inputs
 -->
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -20,10 +20,10 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/bg_gradient_header"
-            android:paddingTop="44dp"
-            android:paddingBottom="28dp"
-            android:paddingHorizontal="20dp">
+            android:background="@color/surface"
+            android:paddingTop="56dp"
+            android:paddingBottom="16dp"
+            android:paddingHorizontal="16dp">
 
             <ImageButton
                 android:id="@+id/btnBack"
@@ -33,15 +33,15 @@
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/action_back"
                 android:src="@android:drawable/ic_menu_revert"
-                android:tint="@color/white" />
+                app:tint="@color/foreground" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:fontFamily="sans-serif-bold"
+                android:fontFamily="sans-serif-medium"
                 android:text="@string/report_found_item"
-                android:textColor="@color/white"
+                android:textColor="@color/foreground"
                 android:textSize="20sp" />
 
         </FrameLayout>
@@ -51,8 +51,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingHorizontal="20dp"
-            android:paddingTop="24dp"
+            android:paddingHorizontal="24dp"
+            android:paddingTop="16dp"
             android:paddingBottom="32dp">
 
             <!-- Image Upload -->
@@ -63,11 +63,12 @@
                 android:layout_marginBottom="8dp"
                 android:clickable="true"
                 android:focusable="true"
-                app:cardCornerRadius="20dp"
+                app:cardCornerRadius="16dp"
                 app:cardElevation="0dp"
-                app:strokeColor="@color/divider"
-                app:strokeWidth="2dp"
-                app:rippleColor="@color/ripple_color">
+                app:strokeColor="@color/border"
+                app:strokeWidth="1dp"
+                app:rippleColor="@color/ripple_color"
+                app:cardBackgroundColor="@color/card">
 
                 <FrameLayout
                     android:layout_width="match_parent"
@@ -84,26 +85,26 @@
                         <ImageView
                             android:layout_width="48dp"
                             android:layout_height="48dp"
-                            android:alpha="0.4"
                             android:contentDescription="Upload"
                             android:src="@android:drawable/ic_menu_camera"
-                            android:tint="@color/text_secondary" />
+                            app:tint="@color/text_secondary" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="10dp"
+                            android:layout_marginTop="12dp"
+                            android:fontFamily="sans-serif-medium"
                             android:text="@string/tap_to_add_image"
-                            android:textColor="@color/text_secondary"
-                            android:textSize="14sp" />
+                            android:textColor="@color/text_primary"
+                            android:textSize="15sp" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="4dp"
-                            android:text="Camera or Gallery"
-                            android:textColor="@color/text_hint"
-                            android:textSize="12sp" />
+                            android:text="PNG, JPG or JPEG up to 10MB"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="13sp" />
 
                     </LinearLayout>
 
@@ -135,15 +136,17 @@
                 style="@style/Widget.LostFound.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:hint="@string/hint_item_name"
-                app:startIconDrawable="@android:drawable/ic_menu_edit">
+                app:startIconDrawable="@android:drawable/ic_menu_edit"
+                app:startIconTint="@color/muted_foreground">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etItemName"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="textCapSentences"
+                    android:textColor="@color/text_primary"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -154,7 +157,7 @@
                 style="@style/Widget.LostFound.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/hint_description">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -165,6 +168,7 @@
                     android:inputType="textMultiLine"
                     android:maxLines="4"
                     android:minLines="3"
+                    android:textColor="@color/text_primary"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -175,15 +179,17 @@
                 style="@style/Widget.LostFound.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/hint_location_found"
-                app:startIconDrawable="@android:drawable/ic_dialog_map">
+                app:startIconDrawable="@android:drawable/ic_dialog_map"
+                app:startIconTint="@color/muted_foreground">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etLocation"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
+                    android:textColor="@color/text_primary"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -194,15 +200,17 @@
                 style="@style/Widget.LostFound.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/hint_drop_off_location"
-                app:startIconDrawable="@android:drawable/ic_menu_directions">
+                app:startIconDrawable="@android:drawable/ic_menu_directions"
+                app:startIconTint="@color/muted_foreground">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etDropOff"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
+                    android:textColor="@color/text_primary"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -213,15 +221,17 @@
                 style="@style/Widget.LostFound.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/hint_phone"
-                app:startIconDrawable="@android:drawable/ic_menu_call">
+                app:startIconDrawable="@android:drawable/ic_menu_call"
+                app:startIconTint="@color/muted_foreground">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPhone"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="phone"
+                    android:textColor="@color/text_primary"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -232,9 +242,10 @@
                 style="@style/Widget.LostFound.TextInputLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="14dp"
+                android:layout_marginTop="16dp"
                 android:hint="@string/hint_date"
-                app:startIconDrawable="@android:drawable/ic_menu_today">
+                app:startIconDrawable="@android:drawable/ic_menu_today"
+                app:startIconTint="@color/muted_foreground">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etDate"
@@ -243,6 +254,7 @@
                     android:clickable="true"
                     android:cursorVisible="false"
                     android:focusable="false"
+                    android:textColor="@color/text_primary"
                     android:textSize="15sp" />
 
             </com.google.android.material.textfield.TextInputLayout>

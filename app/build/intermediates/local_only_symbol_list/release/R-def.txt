@@ -74,6 +74,7 @@ dimen card_elevation
 dimen card_radius_large
 drawable bg_bottom_sheet_handle
 drawable bg_card_glow
+drawable bg_circle_white
 drawable bg_gradient_header
 drawable bg_gradient_scrim
 drawable bg_gradient_scrim_top
@@ -108,7 +109,10 @@ id etLocation
 id etPhone
 id etSearch
 id fabBack
+id fabOverlay
 id fabReport
+id fabReportFound
+id fabReportLost
 id fingerprintGlow
 id footerDivider
 id ivFingerprint

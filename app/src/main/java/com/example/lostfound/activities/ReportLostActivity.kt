@@ -21,17 +21,7 @@ import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Locale
 
-/**
- * ReportLostActivity — Form to report a lost item.
- *
- * User flow:
- * 1. Tap image area → choose Camera or Gallery
- * 2. Fill in item name, description, location, phone, date
- * 3. Tap Submit → image uploads to Storage, item saved to Firestore
- * 4. Activity finishes and returns to Home screen
- *
- * Validates all required fields before submission.
- */
+// form screen where users post lost items
 class ReportLostActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityReportLostBinding
@@ -44,11 +34,7 @@ class ReportLostActivity : AppCompatActivity() {
     // Calendar for date picker
     private val calendar = Calendar.getInstance()
 
-    // ═══════════════════════════════════════════════════════════════
-    // ACTIVITY RESULT LAUNCHERS (Modern replacement for onActivityResult)
-    // ═══════════════════════════════════════════════════════════════
-
-    /** Handles the result from the camera intent */
+    // handles camera result
     private val cameraLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
@@ -58,7 +44,7 @@ class ReportLostActivity : AppCompatActivity() {
         }
     }
 
-    /** Handles the result from the gallery picker */
+    // handles gallery result
     private val galleryLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
@@ -68,9 +54,7 @@ class ReportLostActivity : AppCompatActivity() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // LIFECYCLE
-    // ═══════════════════════════════════════════════════════════════
+    // sets up the screen layout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -81,9 +65,7 @@ class ReportLostActivity : AppCompatActivity() {
         observeViewModel()
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // CLICK LISTENERS
-    // ═══════════════════════════════════════════════════════════════
+    // connects buttons to actions
 
     private fun setupClickListeners() {
         // Back button
@@ -99,14 +81,7 @@ class ReportLostActivity : AppCompatActivity() {
         binding.btnSubmit.setOnClickListener { validateAndSubmit() }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // IMAGE SELECTION
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Shows a Material dialog letting the user choose between
-     * camera and gallery as the image source.
-     */
+    // shows pop-up asking user to pick camera or gallery
     private fun showImageSourceDialog() {
         val options = arrayOf(
             getString(R.string.take_photo),
@@ -132,10 +107,7 @@ class ReportLostActivity : AppCompatActivity() {
             .show()
     }
 
-    /**
-     * Shows the selected image in the preview ImageView
-     * and hides the dashed placeholder.
-     */
+    // places the selected image on screen
     private fun showImagePreview() {
         selectedImageUri?.let { uri ->
             binding.ivPreview.visibility = View.VISIBLE
@@ -149,14 +121,7 @@ class ReportLostActivity : AppCompatActivity() {
         }
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // DATE PICKER
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Opens a Material DatePickerDialog and sets the selected date
-     * into the date text field.
-     */
+    // opens calendar so user can pick a date
     private fun showDatePicker() {
         DatePickerDialog(
             this,
@@ -171,14 +136,7 @@ class ReportLostActivity : AppCompatActivity() {
         ).show()
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // VALIDATION & SUBMISSION
-    // ═══════════════════════════════════════════════════════════════
-
-    /**
-     * Validates all required fields and submits the item if valid.
-     * Shows inline errors on TextInputLayouts for missing fields.
-     */
+    // checks if user filled the form correctly before sending
     private fun validateAndSubmit() {
         var isValid = true
 
@@ -238,9 +196,7 @@ class ReportLostActivity : AppCompatActivity() {
         )
     }
 
-    // ═══════════════════════════════════════════════════════════════
-    // OBSERVE VIEWMODEL
-    // ═══════════════════════════════════════════════════════════════
+    // updates screen when data changes
 
     private fun observeViewModel() {
         // Upload progress
