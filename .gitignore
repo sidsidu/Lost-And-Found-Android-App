@@ -1,5 +1,26 @@
-/.gradle
+# IDEs
 /.idea
 /.vscode
+*.iml
+.DS_Store
+
+# Android/Gradle builds
+/.gradle
+/build
+/app/build
+/local.properties
+.externalNativeBuild
+.cxx
+/captures
+
+# Secrets/Keys
 /app key
 app/google-services.json
+
+# Cache
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
