@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+python-multipart
+firebase-admin
+torch
+Pillow
+sentence-transformers
+numpy
+requests
+python-dotenv

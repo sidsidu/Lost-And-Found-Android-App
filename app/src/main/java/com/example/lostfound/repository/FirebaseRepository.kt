@@ -2,7 +2,6 @@ package com.example.lostfound.repository
 
 import android.content.Context
 import android.net.Uri
-import android.util.Base64
 import com.example.lostfound.models.ItemModel
 import com.example.lostfound.utils.Constants
 import com.google.firebase.firestore.FirebaseFirestore
@@ -144,10 +143,6 @@ class FirebaseRepository {
         val secureUrl: String?
     )
 
-    // save item to firestore
-    suspend fun addItem(item: ItemModel) {
-        itemsCollection.add(item).await()
-    }
 
     // listen for live updates
     fun getItemsRealTime(): Flow<List<ItemModel>> = callbackFlow {
@@ -189,5 +184,15 @@ class FirebaseRepository {
             }
 
         awaitClose { listener.remove() }
+    }
+
+    // fetch the dynamic ngrok backend URL from Firestore
+    suspend fun getBackendUrl(): String? {
+        return try {
+            val snapshot = firestore.collection("config").document("backend").get().await()
+            snapshot.getString("url")
+        } catch (e: Exception) {
+            null
+        }
     }
 }

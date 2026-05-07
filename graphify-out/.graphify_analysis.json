@@ -1,0 +1,210 @@
+{
+  "communities": {
+    "0": [
+      "activities_mainactivity_mainactivity",
+      "activities_mainactivity_mainactivity_observeviewmodel",
+      "activities_mainactivity_mainactivity_oncreate",
+      "activities_mainactivity_mainactivity_requestnotificationpermission",
+      "activities_mainactivity_mainactivity_retrievefcmtoken",
+      "activities_mainactivity_mainactivity_setupclicklisteners",
+      "activities_mainactivity_mainactivity_setupfilterchips",
+      "activities_mainactivity_mainactivity_setuprecyclerview",
+      "activities_mainactivity_mainactivity_setupsearchbar",
+      "activities_mainactivity_mainactivity_togglefabmenu",
+      "app_src_main_java_com_example_lostfound_activities_mainactivity_kt"
+    ],
+    "1": [
+      "activities_reportfoundactivity_reportfoundactivity",
+      "activities_reportfoundactivity_reportfoundactivity_observeviewmodel",
+      "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "activities_reportfoundactivity_reportfoundactivity_onrequestpermissionsresult",
+      "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "activities_reportfoundactivity_reportfoundactivity_showdatepicker",
+      "activities_reportfoundactivity_reportfoundactivity_showimagepreview",
+      "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog",
+      "activities_reportfoundactivity_reportfoundactivity_validateandsubmit",
+      "app_src_main_java_com_example_lostfound_activities_reportfoundactivity_kt"
+    ],
+    "2": [
+      "activities_reportlostactivity_reportlostactivity",
+      "activities_reportlostactivity_reportlostactivity_observeviewmodel",
+      "activities_reportlostactivity_reportlostactivity_oncreate",
+      "activities_reportlostactivity_reportlostactivity_onrequestpermissionsresult",
+      "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "activities_reportlostactivity_reportlostactivity_showdatepicker",
+      "activities_reportlostactivity_reportlostactivity_showimagepreview",
+      "activities_reportlostactivity_reportlostactivity_showimagesourcedialog",
+      "activities_reportlostactivity_reportlostactivity_validateandsubmit",
+      "app_src_main_java_com_example_lostfound_activities_reportlostactivity_kt"
+    ],
+    "3": [
+      "app_src_main_java_com_example_lostfound_viewmodels_itemviewmodel_kt",
+      "viewmodels_itemviewmodel_itemviewmodel",
+      "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "viewmodels_itemviewmodel_itemviewmodel_clearerror",
+      "viewmodels_itemviewmodel_itemviewmodel_clearuploadsuccess",
+      "viewmodels_itemviewmodel_itemviewmodel_fetchitembyid",
+      "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "viewmodels_itemviewmodel_itemviewmodel_submititem"
+    ],
+    "4": [
+      "adapters_itemadapter_itemadapter",
+      "adapters_itemadapter_itemadapter_onbindviewholder",
+      "adapters_itemadapter_itemadapter_oncreateviewholder",
+      "adapters_itemadapter_itemdiffcallback",
+      "adapters_itemadapter_itemdiffcallback_arecontentsthesame",
+      "adapters_itemadapter_itemdiffcallback_areitemsthesame",
+      "adapters_itemadapter_itemviewholder",
+      "adapters_itemadapter_itemviewholder_bind",
+      "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt"
+    ],
+    "5": [
+      "app_src_main_java_com_example_lostfound_views_spotlightripplecard_kt",
+      "views_spotlightripplecard_spotlightripplecard",
+      "views_spotlightripplecard_spotlightripplecard_calculatemaxradius",
+      "views_spotlightripplecard_spotlightripplecard_endrippleanimation",
+      "views_spotlightripplecard_spotlightripplecard_ondraw",
+      "views_spotlightripplecard_spotlightripplecard_onsizechanged",
+      "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "views_spotlightripplecard_spotlightripplecard_performclick",
+      "views_spotlightripplecard_spotlightripplecard_startrippleanimation"
+    ],
+    "6": [
+      "ai_backend_ai_engine_aiengine",
+      "ai_backend_ai_engine_aiengine_analyze_image",
+      "ai_backend_ai_engine_aiengine_generate_embedding",
+      "ai_backend_ai_engine_aiengine_image_to_base64",
+      "ai_backend_ai_engine_aiengine_init",
+      "ai_backend_ai_engine_py",
+      "ai_backend_ai_engine_rationale_115",
+      "ai_backend_ai_engine_rationale_29"
+    ],
+    "7": [
+      "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "repository_firebaserepository_cloudinaryresponse",
+      "repository_firebaserepository_firebaserepository",
+      "repository_firebaserepository_firebaserepository_getbackendurl",
+      "repository_firebaserepository_firebaserepository_getitembyid",
+      "repository_firebaserepository_firebaserepository_getitemsbystatus",
+      "repository_firebaserepository_firebaserepository_getitemsrealtime",
+      "repository_firebaserepository_firebaserepository_uploadimage"
+    ],
+    "8": [
+      "ai_backend_firebase_service_cosine_similarity",
+      "ai_backend_firebase_service_py",
+      "ai_backend_firebase_service_rationale_37",
+      "ai_backend_firebase_service_rationale_82",
+      "ai_backend_firebase_service_save_item_and_check_matches",
+      "ai_backend_firebase_service_send_match_notification",
+      "ai_backend_firebase_service_update_backend_url"
+    ],
+    "9": [
+      "ai_backend_main_itemsubmitrequest",
+      "ai_backend_main_lifespan",
+      "ai_backend_main_py",
+      "ai_backend_main_read_root",
+      "ai_backend_main_submit_item",
+      "basemodel"
+    ],
+    "10": [
+      "app_src_main_java_com_example_lostfound_utils_imagepicker_kt",
+      "utils_imagepicker_imagepicker",
+      "utils_imagepicker_imagepicker_checkcamerapermission",
+      "utils_imagepicker_imagepicker_createimagefile",
+      "utils_imagepicker_imagepicker_launchcamera",
+      "utils_imagepicker_imagepicker_launchgallery"
+    ],
+    "11": [
+      "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate",
+      "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate",
+      "app_src_main_java_com_example_lostfound_activities_spotlightdemoactivity_kt"
+    ],
+    "12": [
+      "app_src_main_java_com_example_lostfound_services_myfirebasemessagingservice_kt",
+      "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived",
+      "services_myfirebasemessagingservice_myfirebasemessagingservice_onnewtoken",
+      "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification"
+    ],
+    "13": [
+      "activities_itemdetailactivity_itemdetailactivity",
+      "activities_itemdetailactivity_itemdetailactivity_oncreate",
+      "app_src_main_java_com_example_lostfound_activities_itemdetailactivity_kt"
+    ],
+    "14": [
+      "app_src_main_java_com_example_lostfound_models_itemmodel_kt",
+      "models_itemmodel_itemmodel"
+    ],
+    "15": [
+      "app_src_main_java_com_example_lostfound_utils_constants_kt",
+      "utils_constants_constants"
+    ],
+    "16": [
+      "build_gradle"
+    ],
+    "17": [
+      "settings_gradle"
+    ],
+    "18": [
+      "app_build_gradle"
+    ]
+  },
+  "cohesion": {},
+  "god_nodes": [
+    {
+      "id": "activities_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "degree": 10
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity",
+      "label": "ReportFoundActivity",
+      "degree": 9
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity",
+      "label": "ReportLostActivity",
+      "degree": 9
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel",
+      "label": "ItemViewModel",
+      "degree": 9
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard",
+      "label": "SpotlightRippleCard",
+      "degree": 8
+    },
+    {
+      "id": "repository_firebaserepository_firebaserepository",
+      "label": "FirebaseRepository",
+      "degree": 6
+    },
+    {
+      "id": "ai_backend_ai_engine_aiengine",
+      "label": "AIEngine",
+      "degree": 5
+    },
+    {
+      "id": "utils_imagepicker_imagepicker",
+      "label": "ImagePicker",
+      "degree": 5
+    },
+    {
+      "id": "ai_backend_firebase_service_save_item_and_check_matches",
+      "label": "save_item_and_check_matches()",
+      "degree": 4
+    },
+    {
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "label": "SpotlightDemoActivity",
+      "degree": 4
+    }
+  ],
+  "surprises": []
+}

@@ -1,0 +1,2285 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "build.gradle",
+      "file_type": "code",
+      "source_file": "build.gradle",
+      "source_location": "L1",
+      "id": "build_gradle"
+    },
+    {
+      "label": "settings.gradle",
+      "file_type": "code",
+      "source_file": "settings.gradle",
+      "source_location": "L1",
+      "id": "settings_gradle"
+    },
+    {
+      "label": "ai_engine.py",
+      "file_type": "code",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L1",
+      "id": "ai_backend_ai_engine_py"
+    },
+    {
+      "label": "AIEngine",
+      "file_type": "code",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L13",
+      "id": "ai_backend_ai_engine_aiengine"
+    },
+    {
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L14",
+      "id": "ai_backend_ai_engine_aiengine_init"
+    },
+    {
+      "label": "._image_to_base64()",
+      "file_type": "code",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L23",
+      "id": "ai_backend_ai_engine_aiengine_image_to_base64"
+    },
+    {
+      "label": ".analyze_image()",
+      "file_type": "code",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L28",
+      "id": "ai_backend_ai_engine_aiengine_analyze_image"
+    },
+    {
+      "label": ".generate_embedding()",
+      "file_type": "code",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L114",
+      "id": "ai_backend_ai_engine_aiengine_generate_embedding"
+    },
+    {
+      "label": "Uses an external llama.cpp server to extract description, category, colors, and",
+      "file_type": "rationale",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L29",
+      "id": "ai_backend_ai_engine_rationale_29"
+    },
+    {
+      "label": "Generates an embedding vector for the text to allow for fast cosine similarity s",
+      "file_type": "rationale",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L115",
+      "id": "ai_backend_ai_engine_rationale_115"
+    },
+    {
+      "label": "firebase_service.py",
+      "file_type": "code",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L1",
+      "id": "ai_backend_firebase_service_py"
+    },
+    {
+      "label": "update_backend_url()",
+      "file_type": "code",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L21",
+      "id": "ai_backend_firebase_service_update_backend_url"
+    },
+    {
+      "label": "cosine_similarity()",
+      "file_type": "code",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L31",
+      "id": "ai_backend_firebase_service_cosine_similarity"
+    },
+    {
+      "label": "save_item_and_check_matches()",
+      "file_type": "code",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L36",
+      "id": "ai_backend_firebase_service_save_item_and_check_matches"
+    },
+    {
+      "label": "send_match_notification()",
+      "file_type": "code",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L81",
+      "id": "ai_backend_firebase_service_send_match_notification"
+    },
+    {
+      "label": "Saves the new item to Firestore and searches for potential matches.",
+      "file_type": "rationale",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L37",
+      "id": "ai_backend_firebase_service_rationale_37"
+    },
+    {
+      "label": "Sends an FCM notification to the user of the matched item.",
+      "file_type": "rationale",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L82",
+      "id": "ai_backend_firebase_service_rationale_82"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L1",
+      "id": "ai_backend_main_py"
+    },
+    {
+      "label": "lifespan()",
+      "file_type": "code",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L20",
+      "id": "ai_backend_main_lifespan"
+    },
+    {
+      "label": "ItemSubmitRequest",
+      "file_type": "code",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L33",
+      "id": "ai_backend_main_itemsubmitrequest"
+    },
+    {
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "id": "basemodel"
+    },
+    {
+      "label": "read_root()",
+      "file_type": "code",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L46",
+      "id": "ai_backend_main_read_root"
+    },
+    {
+      "label": "submit_item()",
+      "file_type": "code",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L50",
+      "id": "ai_backend_main_submit_item"
+    },
+    {
+      "label": "build.gradle",
+      "file_type": "code",
+      "source_file": "app/build.gradle",
+      "source_location": "L1",
+      "id": "app_build_gradle"
+    },
+    {
+      "label": "ItemDetailActivity.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ItemDetailActivity.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_activities_itemdetailactivity_kt"
+    },
+    {
+      "label": "ItemDetailActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ItemDetailActivity.kt",
+      "source_location": "L16",
+      "id": "activities_itemdetailactivity_itemdetailactivity"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ItemDetailActivity.kt",
+      "source_location": "L23",
+      "id": "activities_itemdetailactivity_itemdetailactivity_oncreate"
+    },
+    {
+      "label": "MainActivity.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_activities_mainactivity_kt"
+    },
+    {
+      "label": "MainActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L19",
+      "id": "activities_mainactivity_mainactivity"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L35",
+      "id": "activities_mainactivity_mainactivity_oncreate"
+    },
+    {
+      "label": ".requestNotificationPermission()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L50",
+      "id": "activities_mainactivity_mainactivity_requestnotificationpermission"
+    },
+    {
+      "label": ".retrieveFcmToken()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L61",
+      "id": "activities_mainactivity_mainactivity_retrievefcmtoken"
+    },
+    {
+      "label": ".setupRecyclerView()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L73",
+      "id": "activities_mainactivity_mainactivity_setuprecyclerview"
+    },
+    {
+      "label": ".setupClickListeners()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L95",
+      "id": "activities_mainactivity_mainactivity_setupclicklisteners"
+    },
+    {
+      "label": ".toggleFabMenu()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L133",
+      "id": "activities_mainactivity_mainactivity_togglefabmenu"
+    },
+    {
+      "label": ".setupSearchBar()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L177",
+      "id": "activities_mainactivity_mainactivity_setupsearchbar"
+    },
+    {
+      "label": ".setupFilterChips()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L188",
+      "id": "activities_mainactivity_mainactivity_setupfilterchips"
+    },
+    {
+      "label": ".observeViewModel()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L202",
+      "id": "activities_mainactivity_mainactivity_observeviewmodel"
+    },
+    {
+      "label": "ReportFoundActivity.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_activities_reportfoundactivity_kt"
+    },
+    {
+      "label": "ReportFoundActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L25",
+      "id": "activities_reportfoundactivity_reportfoundactivity"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L56",
+      "id": "activities_reportfoundactivity_reportfoundactivity_oncreate"
+    },
+    {
+      "label": ".setupClickListeners()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L67",
+      "id": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners"
+    },
+    {
+      "label": ".showImageSourceDialog()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L76",
+      "id": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog"
+    },
+    {
+      "label": ".showImagePreview()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L97",
+      "id": "activities_reportfoundactivity_reportfoundactivity_showimagepreview"
+    },
+    {
+      "label": ".showDatePicker()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L112",
+      "id": "activities_reportfoundactivity_reportfoundactivity_showdatepicker"
+    },
+    {
+      "label": ".validateAndSubmit()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L128",
+      "id": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit"
+    },
+    {
+      "label": ".observeViewModel()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L190",
+      "id": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel"
+    },
+    {
+      "label": ".onRequestPermissionsResult()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L216",
+      "id": "activities_reportfoundactivity_reportfoundactivity_onrequestpermissionsresult"
+    },
+    {
+      "label": "ReportLostActivity.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_activities_reportlostactivity_kt"
+    },
+    {
+      "label": "ReportLostActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L25",
+      "id": "activities_reportlostactivity_reportlostactivity"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L59",
+      "id": "activities_reportlostactivity_reportlostactivity_oncreate"
+    },
+    {
+      "label": ".setupClickListeners()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L70",
+      "id": "activities_reportlostactivity_reportlostactivity_setupclicklisteners"
+    },
+    {
+      "label": ".showImageSourceDialog()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L85",
+      "id": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog"
+    },
+    {
+      "label": ".showImagePreview()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L111",
+      "id": "activities_reportlostactivity_reportlostactivity_showimagepreview"
+    },
+    {
+      "label": ".showDatePicker()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L125",
+      "id": "activities_reportlostactivity_reportlostactivity_showdatepicker"
+    },
+    {
+      "label": ".validateAndSubmit()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L140",
+      "id": "activities_reportlostactivity_reportlostactivity_validateandsubmit"
+    },
+    {
+      "label": ".observeViewModel()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L201",
+      "id": "activities_reportlostactivity_reportlostactivity_observeviewmodel"
+    },
+    {
+      "label": ".onRequestPermissionsResult()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L231",
+      "id": "activities_reportlostactivity_reportlostactivity_onrequestpermissionsresult"
+    },
+    {
+      "label": "SpotlightDemoActivity.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_activities_spotlightdemoactivity_kt"
+    },
+    {
+      "label": "SpotlightDemoActivity",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L13",
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity"
+    },
+    {
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L18",
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate"
+    },
+    {
+      "label": ".setupInteractiveCard()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L26",
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard"
+    },
+    {
+      "label": ".toggleSecurityState()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L32",
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate"
+    },
+    {
+      "label": "ItemAdapter.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt"
+    },
+    {
+      "label": "ItemAdapter",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L17",
+      "id": "adapters_itemadapter_itemadapter"
+    },
+    {
+      "label": "ItemViewHolder",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L23",
+      "id": "adapters_itemadapter_itemviewholder"
+    },
+    {
+      "label": ".bind()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L27",
+      "id": "adapters_itemadapter_itemviewholder_bind"
+    },
+    {
+      "label": ".onCreateViewHolder()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L76",
+      "id": "adapters_itemadapter_itemadapter_oncreateviewholder"
+    },
+    {
+      "label": ".onBindViewHolder()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L85",
+      "id": "adapters_itemadapter_itemadapter_onbindviewholder"
+    },
+    {
+      "label": "ItemDiffCallback",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L91",
+      "id": "adapters_itemadapter_itemdiffcallback"
+    },
+    {
+      "label": ".areItemsTheSame()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L92",
+      "id": "adapters_itemadapter_itemdiffcallback_areitemsthesame"
+    },
+    {
+      "label": ".areContentsTheSame()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L96",
+      "id": "adapters_itemadapter_itemdiffcallback_arecontentsthesame"
+    },
+    {
+      "label": "ItemModel.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/models/ItemModel.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_models_itemmodel_kt"
+    },
+    {
+      "label": "ItemModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/models/ItemModel.kt",
+      "source_location": "L16",
+      "id": "models_itemmodel_itemmodel"
+    },
+    {
+      "label": "FirebaseRepository.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt"
+    },
+    {
+      "label": "FirebaseRepository",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L27",
+      "id": "repository_firebaserepository_firebaserepository"
+    },
+    {
+      "label": ".uploadImage()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L43",
+      "id": "repository_firebaserepository_firebaserepository_uploadimage"
+    },
+    {
+      "label": "CloudinaryResponse",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L141",
+      "id": "repository_firebaserepository_cloudinaryresponse"
+    },
+    {
+      "label": ".getItemsRealTime()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L148",
+      "id": "repository_firebaserepository_firebaserepository_getitemsrealtime"
+    },
+    {
+      "label": ".getItemById()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L166",
+      "id": "repository_firebaserepository_firebaserepository_getitembyid"
+    },
+    {
+      "label": ".getItemsByStatus()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L172",
+      "id": "repository_firebaserepository_firebaserepository_getitemsbystatus"
+    },
+    {
+      "label": ".getBackendUrl()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L190",
+      "id": "repository_firebaserepository_firebaserepository_getbackendurl"
+    },
+    {
+      "label": "MyFirebaseMessagingService.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_services_myfirebasemessagingservice_kt"
+    },
+    {
+      "label": "MyFirebaseMessagingService",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L16",
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice"
+    },
+    {
+      "label": ".onNewToken()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L18",
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice_onnewtoken"
+    },
+    {
+      "label": ".onMessageReceived()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L25",
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived"
+    },
+    {
+      "label": ".showNotification()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L35",
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification"
+    },
+    {
+      "label": "Constants.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/Constants.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_utils_constants_kt"
+    },
+    {
+      "label": "Constants",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/Constants.kt",
+      "source_location": "L3",
+      "id": "utils_constants_constants"
+    },
+    {
+      "label": "ImagePicker.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_utils_imagepicker_kt"
+    },
+    {
+      "label": "ImagePicker",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L26",
+      "id": "utils_imagepicker_imagepicker"
+    },
+    {
+      "label": ".launchCamera()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L38",
+      "id": "utils_imagepicker_imagepicker_launchcamera"
+    },
+    {
+      "label": ".launchGallery()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L57",
+      "id": "utils_imagepicker_imagepicker_launchgallery"
+    },
+    {
+      "label": ".checkCameraPermission()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L69",
+      "id": "utils_imagepicker_imagepicker_checkcamerapermission"
+    },
+    {
+      "label": ".createImageFile()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L90",
+      "id": "utils_imagepicker_imagepicker_createimagefile"
+    },
+    {
+      "label": "ItemViewModel.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_viewmodels_itemviewmodel_kt"
+    },
+    {
+      "label": "ItemViewModel",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L20",
+      "id": "viewmodels_itemviewmodel_itemviewmodel"
+    },
+    {
+      "label": ".loadAllItems()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L60",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_loadallitems"
+    },
+    {
+      "label": ".loadItemsByStatus()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L78",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus"
+    },
+    {
+      "label": ".applySearchFilter()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L98",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter"
+    },
+    {
+      "label": ".searchItems()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L108",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_searchitems"
+    },
+    {
+      "label": ".fetchItemById()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L121",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_fetchitembyid"
+    },
+    {
+      "label": ".submitItem()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L132",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_submititem"
+    },
+    {
+      "label": ".clearError()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L208",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_clearerror"
+    },
+    {
+      "label": ".clearUploadSuccess()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L215",
+      "id": "viewmodels_itemviewmodel_itemviewmodel_clearuploadsuccess"
+    },
+    {
+      "label": "SpotlightRippleCard.kt",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L1",
+      "id": "app_src_main_java_com_example_lostfound_views_spotlightripplecard_kt"
+    },
+    {
+      "label": "SpotlightRippleCard",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L13",
+      "id": "views_spotlightripplecard_spotlightripplecard"
+    },
+    {
+      "label": ".onSizeChanged()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L55",
+      "id": "views_spotlightripplecard_spotlightripplecard_onsizechanged"
+    },
+    {
+      "label": ".calculateMaxRadius()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L60",
+      "id": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius"
+    },
+    {
+      "label": ".onTouchEvent()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L67",
+      "id": "views_spotlightripplecard_spotlightripplecard_ontouchevent"
+    },
+    {
+      "label": ".performClick()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L86",
+      "id": "views_spotlightripplecard_spotlightripplecard_performclick"
+    },
+    {
+      "label": ".startRippleAnimation()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L91",
+      "id": "views_spotlightripplecard_spotlightripplecard_startrippleanimation"
+    },
+    {
+      "label": ".endRippleAnimation()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L134",
+      "id": "views_spotlightripplecard_spotlightripplecard_endrippleanimation"
+    },
+    {
+      "label": ".onDraw()",
+      "file_type": "code",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L146",
+      "id": "views_spotlightripplecard_spotlightripplecard_ondraw"
+    }
+  ],
+  "edges": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_py",
+      "_tgt": "ai_backend_ai_engine_aiengine",
+      "source": "ai_backend_ai_engine_py",
+      "target": "ai_backend_ai_engine_aiengine"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_aiengine",
+      "_tgt": "ai_backend_ai_engine_aiengine_init",
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_init"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_aiengine",
+      "_tgt": "ai_backend_ai_engine_aiengine_image_to_base64",
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_image_to_base64"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_aiengine",
+      "_tgt": "ai_backend_ai_engine_aiengine_analyze_image",
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_analyze_image"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_aiengine",
+      "_tgt": "ai_backend_ai_engine_aiengine_generate_embedding",
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_generate_embedding"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_aiengine_analyze_image",
+      "_tgt": "ai_backend_ai_engine_aiengine_image_to_base64",
+      "source": "ai_backend_ai_engine_aiengine_image_to_base64",
+      "target": "ai_backend_ai_engine_aiengine_analyze_image"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_rationale_29",
+      "_tgt": "ai_backend_ai_engine_aiengine_analyze_image",
+      "source": "ai_backend_ai_engine_aiengine_analyze_image",
+      "target": "ai_backend_ai_engine_rationale_29"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/ai_engine.py",
+      "source_location": "L115",
+      "weight": 1.0,
+      "_src": "ai_backend_ai_engine_rationale_115",
+      "_tgt": "ai_backend_ai_engine_aiengine_generate_embedding",
+      "source": "ai_backend_ai_engine_aiengine_generate_embedding",
+      "target": "ai_backend_ai_engine_rationale_115"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_py",
+      "_tgt": "ai_backend_firebase_service_update_backend_url",
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_update_backend_url"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L31",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_py",
+      "_tgt": "ai_backend_firebase_service_cosine_similarity",
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_cosine_similarity"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L36",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_py",
+      "_tgt": "ai_backend_firebase_service_save_item_and_check_matches",
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_save_item_and_check_matches"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_py",
+      "_tgt": "ai_backend_firebase_service_send_match_notification",
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_send_match_notification"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_save_item_and_check_matches",
+      "_tgt": "ai_backend_firebase_service_cosine_similarity",
+      "source": "ai_backend_firebase_service_cosine_similarity",
+      "target": "ai_backend_firebase_service_save_item_and_check_matches"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_save_item_and_check_matches",
+      "_tgt": "ai_backend_firebase_service_send_match_notification",
+      "source": "ai_backend_firebase_service_save_item_and_check_matches",
+      "target": "ai_backend_firebase_service_send_match_notification"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L37",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_rationale_37",
+      "_tgt": "ai_backend_firebase_service_save_item_and_check_matches",
+      "source": "ai_backend_firebase_service_save_item_and_check_matches",
+      "target": "ai_backend_firebase_service_rationale_37"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/firebase_service.py",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_src": "ai_backend_firebase_service_rationale_82",
+      "_tgt": "ai_backend_firebase_service_send_match_notification",
+      "source": "ai_backend_firebase_service_send_match_notification",
+      "target": "ai_backend_firebase_service_rationale_82"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "ai_backend_main_py",
+      "_tgt": "ai_backend_main_lifespan",
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_lifespan"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "ai_backend_main_py",
+      "_tgt": "ai_backend_main_itemsubmitrequest",
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_itemsubmitrequest"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_src": "ai_backend_main_py",
+      "_tgt": "ai_backend_main_read_root",
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_read_root"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "ai_backend_main_py",
+      "_tgt": "ai_backend_main_submit_item",
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_submit_item"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend/main.py",
+      "source_location": "L33",
+      "weight": 1.0,
+      "_src": "ai_backend_main_itemsubmitrequest",
+      "_tgt": "basemodel",
+      "source": "ai_backend_main_itemsubmitrequest",
+      "target": "basemodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ItemDetailActivity.kt",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_activities_itemdetailactivity_kt",
+      "_tgt": "activities_itemdetailactivity_itemdetailactivity",
+      "source": "app_src_main_java_com_example_lostfound_activities_itemdetailactivity_kt",
+      "target": "activities_itemdetailactivity_itemdetailactivity"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ItemDetailActivity.kt",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "activities_itemdetailactivity_itemdetailactivity",
+      "_tgt": "activities_itemdetailactivity_itemdetailactivity_oncreate",
+      "source": "activities_itemdetailactivity_itemdetailactivity",
+      "target": "activities_itemdetailactivity_itemdetailactivity_oncreate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L19",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_activities_mainactivity_kt",
+      "_tgt": "activities_mainactivity_mainactivity",
+      "source": "app_src_main_java_com_example_lostfound_activities_mainactivity_kt",
+      "target": "activities_mainactivity_mainactivity"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_oncreate",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_oncreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L50",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_requestnotificationpermission",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_requestnotificationpermission"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_retrievefcmtoken",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_retrievefcmtoken"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setuprecyclerview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L95",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setupclicklisteners"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L133",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_togglefabmenu",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_togglefabmenu"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L177",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_setupsearchbar",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setupsearchbar"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L188",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_setupfilterchips",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setupfilterchips"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L202",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity",
+      "_tgt": "activities_mainactivity_mainactivity_observeviewmodel",
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_observeviewmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L40",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_oncreate",
+      "_tgt": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setuprecyclerview"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L41",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_oncreate",
+      "_tgt": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setupclicklisteners"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L42",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_oncreate",
+      "_tgt": "activities_mainactivity_mainactivity_setupsearchbar",
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setupsearchbar"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_oncreate",
+      "_tgt": "activities_mainactivity_mainactivity_setupfilterchips",
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setupfilterchips"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L44",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_oncreate",
+      "_tgt": "activities_mainactivity_mainactivity_observeviewmodel",
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_observeviewmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L46",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_oncreate",
+      "_tgt": "activities_mainactivity_mainactivity_requestnotificationpermission",
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_requestnotificationpermission"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L47",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_oncreate",
+      "_tgt": "activities_mainactivity_mainactivity_retrievefcmtoken",
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_retrievefcmtoken"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L74",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "_tgt": "adapters_itemadapter_itemadapter",
+      "source": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "target": "adapters_itemadapter_itemadapter"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/MainActivity.kt",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_src": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "_tgt": "activities_mainactivity_mainactivity_togglefabmenu",
+      "source": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "target": "activities_mainactivity_mainactivity_togglefabmenu"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_activities_reportfoundactivity_kt",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity",
+      "source": "app_src_main_java_com_example_lostfound_activities_reportfoundactivity_kt",
+      "target": "activities_reportfoundactivity_reportfoundactivity"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L56",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_oncreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L97",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_showimagepreview",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showimagepreview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L112",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_showdatepicker",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showdatepicker"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L128",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L190",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L216",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_onrequestpermissionsresult",
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_onrequestpermissionsresult"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L61",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "source": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "target": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L62",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel",
+      "source": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "target": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog",
+      "source": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_showdatepicker",
+      "source": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showdatepicker"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportFoundActivity.kt",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_src": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "_tgt": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit",
+      "source": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "target": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_activities_reportlostactivity_kt",
+      "_tgt": "activities_reportlostactivity_reportlostactivity",
+      "source": "app_src_main_java_com_example_lostfound_activities_reportlostactivity_kt",
+      "target": "activities_reportlostactivity_reportlostactivity"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L59",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_oncreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L70",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_setupclicklisteners"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L111",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_showimagepreview",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_showimagepreview"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L125",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_showdatepicker",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_showdatepicker"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L140",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_validateandsubmit",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_validateandsubmit"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L201",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_observeviewmodel",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_observeviewmodel"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L231",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_onrequestpermissionsresult",
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_onrequestpermissionsresult"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L64",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "source": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "target": "activities_reportlostactivity_reportlostactivity_setupclicklisteners"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L65",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_observeviewmodel",
+      "source": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "target": "activities_reportlostactivity_reportlostactivity_observeviewmodel"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L75",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog",
+      "source": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "target": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_showdatepicker",
+      "source": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "target": "activities_reportlostactivity_reportlostactivity_showdatepicker"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/ReportLostActivity.kt",
+      "source_location": "L81",
+      "weight": 1.0,
+      "_src": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "_tgt": "activities_reportlostactivity_reportlostactivity_validateandsubmit",
+      "source": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "target": "activities_reportlostactivity_reportlostactivity_validateandsubmit"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_activities_spotlightdemoactivity_kt",
+      "_tgt": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "source": "app_src_main_java_com_example_lostfound_activities_spotlightdemoactivity_kt",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "_tgt": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate",
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "_tgt": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_src": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "_tgt": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate",
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate",
+      "_tgt": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/activities/SpotlightDemoActivity.kt",
+      "source_location": "L28",
+      "weight": 1.0,
+      "_src": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "_tgt": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate",
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L17",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "_tgt": "adapters_itemadapter_itemadapter",
+      "source": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "target": "adapters_itemadapter_itemadapter"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L23",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "_tgt": "adapters_itemadapter_itemviewholder",
+      "source": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "target": "adapters_itemadapter_itemviewholder"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "_tgt": "adapters_itemadapter_itemdiffcallback",
+      "source": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "target": "adapters_itemadapter_itemdiffcallback"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L76",
+      "weight": 1.0,
+      "_src": "adapters_itemadapter_itemadapter",
+      "_tgt": "adapters_itemadapter_itemadapter_oncreateviewholder",
+      "source": "adapters_itemadapter_itemadapter",
+      "target": "adapters_itemadapter_itemadapter_oncreateviewholder"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L85",
+      "weight": 1.0,
+      "_src": "adapters_itemadapter_itemadapter",
+      "_tgt": "adapters_itemadapter_itemadapter_onbindviewholder",
+      "source": "adapters_itemadapter_itemadapter",
+      "target": "adapters_itemadapter_itemadapter_onbindviewholder"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "adapters_itemadapter_itemviewholder",
+      "_tgt": "adapters_itemadapter_itemviewholder_bind",
+      "source": "adapters_itemadapter_itemviewholder",
+      "target": "adapters_itemadapter_itemviewholder_bind"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L82",
+      "weight": 1.0,
+      "_src": "adapters_itemadapter_itemadapter_oncreateviewholder",
+      "_tgt": "adapters_itemadapter_itemviewholder",
+      "source": "adapters_itemadapter_itemviewholder",
+      "target": "adapters_itemadapter_itemadapter_oncreateviewholder"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_src": "adapters_itemadapter_itemadapter_onbindviewholder",
+      "_tgt": "adapters_itemadapter_itemviewholder_bind",
+      "source": "adapters_itemadapter_itemviewholder_bind",
+      "target": "adapters_itemadapter_itemadapter_onbindviewholder"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L92",
+      "weight": 1.0,
+      "_src": "adapters_itemadapter_itemdiffcallback",
+      "_tgt": "adapters_itemadapter_itemdiffcallback_areitemsthesame",
+      "source": "adapters_itemadapter_itemdiffcallback",
+      "target": "adapters_itemadapter_itemdiffcallback_areitemsthesame"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/adapters/ItemAdapter.kt",
+      "source_location": "L96",
+      "weight": 1.0,
+      "_src": "adapters_itemadapter_itemdiffcallback",
+      "_tgt": "adapters_itemadapter_itemdiffcallback_arecontentsthesame",
+      "source": "adapters_itemadapter_itemdiffcallback",
+      "target": "adapters_itemadapter_itemdiffcallback_arecontentsthesame"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/models/ItemModel.kt",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_models_itemmodel_kt",
+      "_tgt": "models_itemmodel_itemmodel",
+      "source": "app_src_main_java_com_example_lostfound_models_itemmodel_kt",
+      "target": "models_itemmodel_itemmodel"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L27",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "_tgt": "repository_firebaserepository_firebaserepository",
+      "source": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "target": "repository_firebaserepository_firebaserepository"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L141",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "_tgt": "repository_firebaserepository_cloudinaryresponse",
+      "source": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "target": "repository_firebaserepository_cloudinaryresponse"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L43",
+      "weight": 1.0,
+      "_src": "repository_firebaserepository_firebaserepository",
+      "_tgt": "repository_firebaserepository_firebaserepository_uploadimage",
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_uploadimage"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L148",
+      "weight": 1.0,
+      "_src": "repository_firebaserepository_firebaserepository",
+      "_tgt": "repository_firebaserepository_firebaserepository_getitemsrealtime",
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getitemsrealtime"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L166",
+      "weight": 1.0,
+      "_src": "repository_firebaserepository_firebaserepository",
+      "_tgt": "repository_firebaserepository_firebaserepository_getitembyid",
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getitembyid"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L172",
+      "weight": 1.0,
+      "_src": "repository_firebaserepository_firebaserepository",
+      "_tgt": "repository_firebaserepository_firebaserepository_getitemsbystatus",
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getitemsbystatus"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/repository/FirebaseRepository.kt",
+      "source_location": "L190",
+      "weight": 1.0,
+      "_src": "repository_firebaserepository_firebaserepository",
+      "_tgt": "repository_firebaserepository_firebaserepository_getbackendurl",
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getbackendurl"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L16",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_services_myfirebasemessagingservice_kt",
+      "_tgt": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "source": "app_src_main_java_com_example_lostfound_services_myfirebasemessagingservice_kt",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L18",
+      "weight": 1.0,
+      "_src": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "_tgt": "services_myfirebasemessagingservice_myfirebasemessagingservice_onnewtoken",
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_onnewtoken"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L25",
+      "weight": 1.0,
+      "_src": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "_tgt": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived",
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L35",
+      "weight": 1.0,
+      "_src": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "_tgt": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification",
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/services/MyFirebaseMessagingService.kt",
+      "source_location": "L32",
+      "weight": 1.0,
+      "_src": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived",
+      "_tgt": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification",
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/Constants.kt",
+      "source_location": "L3",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_utils_constants_kt",
+      "_tgt": "utils_constants_constants",
+      "source": "app_src_main_java_com_example_lostfound_utils_constants_kt",
+      "target": "utils_constants_constants"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L26",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_utils_imagepicker_kt",
+      "_tgt": "utils_imagepicker_imagepicker",
+      "source": "app_src_main_java_com_example_lostfound_utils_imagepicker_kt",
+      "target": "utils_imagepicker_imagepicker"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L38",
+      "weight": 1.0,
+      "_src": "utils_imagepicker_imagepicker",
+      "_tgt": "utils_imagepicker_imagepicker_launchcamera",
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_launchcamera"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_src": "utils_imagepicker_imagepicker",
+      "_tgt": "utils_imagepicker_imagepicker_launchgallery",
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_launchgallery"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L69",
+      "weight": 1.0,
+      "_src": "utils_imagepicker_imagepicker",
+      "_tgt": "utils_imagepicker_imagepicker_checkcamerapermission",
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_checkcamerapermission"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L90",
+      "weight": 1.0,
+      "_src": "utils_imagepicker_imagepicker",
+      "_tgt": "utils_imagepicker_imagepicker_createimagefile",
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_createimagefile"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/utils/ImagePicker.kt",
+      "source_location": "L39",
+      "weight": 1.0,
+      "_src": "utils_imagepicker_imagepicker_launchcamera",
+      "_tgt": "utils_imagepicker_imagepicker_createimagefile",
+      "source": "utils_imagepicker_imagepicker_launchcamera",
+      "target": "utils_imagepicker_imagepicker_createimagefile"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L20",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_viewmodels_itemviewmodel_kt",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel",
+      "source": "app_src_main_java_com_example_lostfound_viewmodels_itemviewmodel_kt",
+      "target": "viewmodels_itemviewmodel_itemviewmodel"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_loadallitems"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L98",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L108",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_searchitems"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L121",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_fetchitembyid",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_fetchitembyid"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L132",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_submititem",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_submititem"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L208",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_clearerror",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_clearerror"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L215",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_clearuploadsuccess",
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_clearuploadsuccess"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L71",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "source": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L114",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "source": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_searchitems"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L89",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "source": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/viewmodels/ItemViewModel.kt",
+      "source_location": "L116",
+      "weight": 1.0,
+      "_src": "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "_tgt": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "source": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_searchitems"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L13",
+      "weight": 1.0,
+      "_src": "app_src_main_java_com_example_lostfound_views_spotlightripplecard_kt",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard",
+      "source": "app_src_main_java_com_example_lostfound_views_spotlightripplecard_kt",
+      "target": "views_spotlightripplecard_spotlightripplecard"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L55",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_onsizechanged",
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_onsizechanged"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L60",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius",
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L67",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_ontouchevent"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L86",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_performclick",
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_performclick"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L91",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_startrippleanimation",
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_startrippleanimation"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L134",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_endrippleanimation",
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_endrippleanimation"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L146",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_ondraw",
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_ondraw"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L57",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard_onsizechanged",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius",
+      "source": "views_spotlightripplecard_spotlightripplecard_onsizechanged",
+      "target": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L73",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_startrippleanimation",
+      "source": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "target": "views_spotlightripplecard_spotlightripplecard_startrippleanimation"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L78",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_endrippleanimation",
+      "source": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "target": "views_spotlightripplecard_spotlightripplecard_endrippleanimation"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app/src/main/java/com/example/lostfound/views/SpotlightRippleCard.kt",
+      "source_location": "L79",
+      "weight": 1.0,
+      "_src": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "_tgt": "views_spotlightripplecard_spotlightripplecard_performclick",
+      "source": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "target": "views_spotlightripplecard_spotlightripplecard_performclick"
+    }
+  ]
+}

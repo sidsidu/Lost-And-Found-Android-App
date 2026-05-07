@@ -1,0 +1,2262 @@
+{
+  "nodes": [
+    {
+      "id": "build_gradle",
+      "label": "build.gradle",
+      "file_type": "code",
+      "source_file": "build.gradle",
+      "source_location": "L1"
+    },
+    {
+      "id": "settings_gradle",
+      "label": "settings.gradle",
+      "file_type": "code",
+      "source_file": "settings.gradle",
+      "source_location": "L1"
+    },
+    {
+      "id": "ai_backend_ai_engine_py",
+      "label": "ai_engine.py",
+      "file_type": "code",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ai_backend_ai_engine_aiengine",
+      "label": "AIEngine",
+      "file_type": "code",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L13"
+    },
+    {
+      "id": "ai_backend_ai_engine_aiengine_init",
+      "label": ".__init__()",
+      "file_type": "code",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L14"
+    },
+    {
+      "id": "ai_backend_ai_engine_aiengine_image_to_base64",
+      "label": "._image_to_base64()",
+      "file_type": "code",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L23"
+    },
+    {
+      "id": "ai_backend_ai_engine_aiengine_analyze_image",
+      "label": ".analyze_image()",
+      "file_type": "code",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "ai_backend_ai_engine_aiengine_generate_embedding",
+      "label": ".generate_embedding()",
+      "file_type": "code",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L114"
+    },
+    {
+      "id": "ai_backend_ai_engine_rationale_29",
+      "label": "Uses an external llama.cpp server to extract description, category, colors, and",
+      "file_type": "rationale",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L29"
+    },
+    {
+      "id": "ai_backend_ai_engine_rationale_115",
+      "label": "Generates an embedding vector for the text to allow for fast cosine similarity s",
+      "file_type": "rationale",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L115"
+    },
+    {
+      "id": "ai_backend_firebase_service_py",
+      "label": "firebase_service.py",
+      "file_type": "code",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ai_backend_firebase_service_update_backend_url",
+      "label": "update_backend_url()",
+      "file_type": "code",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L21"
+    },
+    {
+      "id": "ai_backend_firebase_service_cosine_similarity",
+      "label": "cosine_similarity()",
+      "file_type": "code",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L31"
+    },
+    {
+      "id": "ai_backend_firebase_service_save_item_and_check_matches",
+      "label": "save_item_and_check_matches()",
+      "file_type": "code",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L36"
+    },
+    {
+      "id": "ai_backend_firebase_service_send_match_notification",
+      "label": "send_match_notification()",
+      "file_type": "code",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L81"
+    },
+    {
+      "id": "ai_backend_firebase_service_rationale_37",
+      "label": "Saves the new item to Firestore and searches for potential matches.",
+      "file_type": "rationale",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L37"
+    },
+    {
+      "id": "ai_backend_firebase_service_rationale_82",
+      "label": "Sends an FCM notification to the user of the matched item.",
+      "file_type": "rationale",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L82"
+    },
+    {
+      "id": "ai_backend_main_py",
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "ai_backend_main_lifespan",
+      "label": "lifespan()",
+      "file_type": "code",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L20"
+    },
+    {
+      "id": "ai_backend_main_itemsubmitrequest",
+      "label": "ItemSubmitRequest",
+      "file_type": "code",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L33"
+    },
+    {
+      "id": "basemodel",
+      "label": "BaseModel",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "ai_backend_main_read_root",
+      "label": "read_root()",
+      "file_type": "code",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L46"
+    },
+    {
+      "id": "ai_backend_main_submit_item",
+      "label": "submit_item()",
+      "file_type": "code",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L50"
+    },
+    {
+      "id": "app_build_gradle",
+      "label": "build.gradle",
+      "file_type": "code",
+      "source_file": "app\\build.gradle",
+      "source_location": "L1"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_activities_itemdetailactivity_kt",
+      "label": "ItemDetailActivity.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ItemDetailActivity.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "activities_itemdetailactivity_itemdetailactivity",
+      "label": "ItemDetailActivity",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ItemDetailActivity.kt",
+      "source_location": "L16"
+    },
+    {
+      "id": "activities_itemdetailactivity_itemdetailactivity_oncreate",
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ItemDetailActivity.kt",
+      "source_location": "L23"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_activities_mainactivity_kt",
+      "label": "MainActivity.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity",
+      "label": "MainActivity",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L19"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_oncreate",
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L35"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_requestnotificationpermission",
+      "label": ".requestNotificationPermission()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L50"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_retrievefcmtoken",
+      "label": ".retrieveFcmToken()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L61"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "label": ".setupRecyclerView()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L73"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "label": ".setupClickListeners()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L95"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_togglefabmenu",
+      "label": ".toggleFabMenu()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L133"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_setupsearchbar",
+      "label": ".setupSearchBar()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L177"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_setupfilterchips",
+      "label": ".setupFilterChips()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L188"
+    },
+    {
+      "id": "activities_mainactivity_mainactivity_observeviewmodel",
+      "label": ".observeViewModel()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L202"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_activities_reportfoundactivity_kt",
+      "label": "ReportFoundActivity.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity",
+      "label": "ReportFoundActivity",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L25"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L56"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "label": ".setupClickListeners()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L67"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog",
+      "label": ".showImageSourceDialog()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L76"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_showimagepreview",
+      "label": ".showImagePreview()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L97"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_showdatepicker",
+      "label": ".showDatePicker()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L112"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit",
+      "label": ".validateAndSubmit()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L128"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel",
+      "label": ".observeViewModel()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L190"
+    },
+    {
+      "id": "activities_reportfoundactivity_reportfoundactivity_onrequestpermissionsresult",
+      "label": ".onRequestPermissionsResult()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L216"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_activities_reportlostactivity_kt",
+      "label": "ReportLostActivity.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity",
+      "label": "ReportLostActivity",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L25"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L59"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "label": ".setupClickListeners()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L70"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog",
+      "label": ".showImageSourceDialog()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L85"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_showimagepreview",
+      "label": ".showImagePreview()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L111"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_showdatepicker",
+      "label": ".showDatePicker()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L125"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_validateandsubmit",
+      "label": ".validateAndSubmit()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L140"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_observeviewmodel",
+      "label": ".observeViewModel()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L201"
+    },
+    {
+      "id": "activities_reportlostactivity_reportlostactivity_onrequestpermissionsresult",
+      "label": ".onRequestPermissionsResult()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L231"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_activities_spotlightdemoactivity_kt",
+      "label": "SpotlightDemoActivity.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "label": "SpotlightDemoActivity",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L13"
+    },
+    {
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate",
+      "label": ".onCreate()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L18"
+    },
+    {
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "label": ".setupInteractiveCard()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L26"
+    },
+    {
+      "id": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate",
+      "label": ".toggleSecurityState()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L32"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "label": "ItemAdapter.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "adapters_itemadapter_itemadapter",
+      "label": "ItemAdapter",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L17"
+    },
+    {
+      "id": "adapters_itemadapter_itemviewholder",
+      "label": "ItemViewHolder",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L23"
+    },
+    {
+      "id": "adapters_itemadapter_itemviewholder_bind",
+      "label": ".bind()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L27"
+    },
+    {
+      "id": "adapters_itemadapter_itemadapter_oncreateviewholder",
+      "label": ".onCreateViewHolder()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L76"
+    },
+    {
+      "id": "adapters_itemadapter_itemadapter_onbindviewholder",
+      "label": ".onBindViewHolder()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L85"
+    },
+    {
+      "id": "adapters_itemadapter_itemdiffcallback",
+      "label": "ItemDiffCallback",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L91"
+    },
+    {
+      "id": "adapters_itemadapter_itemdiffcallback_areitemsthesame",
+      "label": ".areItemsTheSame()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L92"
+    },
+    {
+      "id": "adapters_itemadapter_itemdiffcallback_arecontentsthesame",
+      "label": ".areContentsTheSame()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L96"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_models_itemmodel_kt",
+      "label": "ItemModel.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\models\\ItemModel.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "models_itemmodel_itemmodel",
+      "label": "ItemModel",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\models\\ItemModel.kt",
+      "source_location": "L16"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "label": "FirebaseRepository.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "repository_firebaserepository_firebaserepository",
+      "label": "FirebaseRepository",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L27"
+    },
+    {
+      "id": "repository_firebaserepository_firebaserepository_uploadimage",
+      "label": ".uploadImage()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L43"
+    },
+    {
+      "id": "repository_firebaserepository_cloudinaryresponse",
+      "label": "CloudinaryResponse",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L141"
+    },
+    {
+      "id": "repository_firebaserepository_firebaserepository_getitemsrealtime",
+      "label": ".getItemsRealTime()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L148"
+    },
+    {
+      "id": "repository_firebaserepository_firebaserepository_getitembyid",
+      "label": ".getItemById()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L166"
+    },
+    {
+      "id": "repository_firebaserepository_firebaserepository_getitemsbystatus",
+      "label": ".getItemsByStatus()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L172"
+    },
+    {
+      "id": "repository_firebaserepository_firebaserepository_getbackendurl",
+      "label": ".getBackendUrl()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L190"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_services_myfirebasemessagingservice_kt",
+      "label": "MyFirebaseMessagingService.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "label": "MyFirebaseMessagingService",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L16"
+    },
+    {
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice_onnewtoken",
+      "label": ".onNewToken()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L18"
+    },
+    {
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived",
+      "label": ".onMessageReceived()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L25"
+    },
+    {
+      "id": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification",
+      "label": ".showNotification()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L35"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_utils_constants_kt",
+      "label": "Constants.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\Constants.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "utils_constants_constants",
+      "label": "Constants",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\Constants.kt",
+      "source_location": "L3"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_utils_imagepicker_kt",
+      "label": "ImagePicker.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "utils_imagepicker_imagepicker",
+      "label": "ImagePicker",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L26"
+    },
+    {
+      "id": "utils_imagepicker_imagepicker_launchcamera",
+      "label": ".launchCamera()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L38"
+    },
+    {
+      "id": "utils_imagepicker_imagepicker_launchgallery",
+      "label": ".launchGallery()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L57"
+    },
+    {
+      "id": "utils_imagepicker_imagepicker_checkcamerapermission",
+      "label": ".checkCameraPermission()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L69"
+    },
+    {
+      "id": "utils_imagepicker_imagepicker_createimagefile",
+      "label": ".createImageFile()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L90"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_viewmodels_itemviewmodel_kt",
+      "label": "ItemViewModel.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel",
+      "label": "ItemViewModel",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L20"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "label": ".loadAllItems()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L60"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "label": ".loadItemsByStatus()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L78"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "label": ".applySearchFilter()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L98"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "label": ".searchItems()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L108"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_fetchitembyid",
+      "label": ".fetchItemById()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L121"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_submititem",
+      "label": ".submitItem()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L132"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_clearerror",
+      "label": ".clearError()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L208"
+    },
+    {
+      "id": "viewmodels_itemviewmodel_itemviewmodel_clearuploadsuccess",
+      "label": ".clearUploadSuccess()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L215"
+    },
+    {
+      "id": "app_src_main_java_com_example_lostfound_views_spotlightripplecard_kt",
+      "label": "SpotlightRippleCard.kt",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L1"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard",
+      "label": "SpotlightRippleCard",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L13"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard_onsizechanged",
+      "label": ".onSizeChanged()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L55"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius",
+      "label": ".calculateMaxRadius()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L60"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "label": ".onTouchEvent()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L67"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard_performclick",
+      "label": ".performClick()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L86"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard_startrippleanimation",
+      "label": ".startRippleAnimation()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L91"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard_endrippleanimation",
+      "label": ".endRippleAnimation()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L134"
+    },
+    {
+      "id": "views_spotlightripplecard_spotlightripplecard_ondraw",
+      "label": ".onDraw()",
+      "file_type": "code",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L146"
+    }
+  ],
+  "edges": [
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "json",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "base64",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "requests",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "io",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "sentence_transformers",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "pil",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_py",
+      "target": "ai_backend_ai_engine_aiengine",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_init",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_image_to_base64",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_analyze_image",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_aiengine",
+      "target": "ai_backend_ai_engine_aiengine_generate_embedding",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_aiengine_analyze_image",
+      "target": "ai_backend_ai_engine_aiengine_image_to_base64",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_rationale_29",
+      "target": "ai_backend_ai_engine_aiengine_analyze_image",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_ai_engine_rationale_115",
+      "target": "ai_backend_ai_engine_aiengine_generate_embedding",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\ai_engine.py",
+      "source_location": "L115",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "firebase_admin",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "firebase_admin",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "numpy",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_update_backend_url",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_cosine_similarity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_save_item_and_check_matches",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_py",
+      "target": "ai_backend_firebase_service_send_match_notification",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_save_item_and_check_matches",
+      "target": "ai_backend_firebase_service_cosine_similarity",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L68",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_save_item_and_check_matches",
+      "target": "ai_backend_firebase_service_send_match_notification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_rationale_37",
+      "target": "ai_backend_firebase_service_save_item_and_check_matches",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_firebase_service_rationale_82",
+      "target": "ai_backend_firebase_service_send_match_notification",
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\firebase_service.py",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "os",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "fastapi",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "fastapi_responses",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "pydantic",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "requests",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "io",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "pil",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "dotenv",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "ai_engine",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "firebase_service",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "contextlib",
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_lifespan",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_itemsubmitrequest",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_itemsubmitrequest",
+      "target": "basemodel",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_read_root",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "ai_backend_main_submit_item",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "ai_backend_main_py",
+      "target": "uvicorn",
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "ai_backend\\main.py",
+      "source_location": "L93",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_activities_itemdetailactivity_kt",
+      "target": "activities_itemdetailactivity_itemdetailactivity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ItemDetailActivity.kt",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_itemdetailactivity_itemdetailactivity",
+      "target": "activities_itemdetailactivity_itemdetailactivity_oncreate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ItemDetailActivity.kt",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_activities_mainactivity_kt",
+      "target": "activities_mainactivity_mainactivity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_oncreate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_requestnotificationpermission",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L50",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_retrievefcmtoken",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_togglefabmenu",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setupsearchbar",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L177",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_setupfilterchips",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L188",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity",
+      "target": "activities_mainactivity_mainactivity_observeviewmodel",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L202",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setupsearchbar",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L42",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_setupfilterchips",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_observeviewmodel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L44",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_requestnotificationpermission",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L46",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_oncreate",
+      "target": "activities_mainactivity_mainactivity_retrievefcmtoken",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_setupclicklisteners",
+      "target": "activities_mainactivity_mainactivity_togglefabmenu",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_activities_reportfoundactivity_kt",
+      "target": "activities_reportfoundactivity_reportfoundactivity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showimagepreview",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L97",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showdatepicker",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L112",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L128",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L190",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity",
+      "target": "activities_reportfoundactivity_reportfoundactivity_onrequestpermissionsresult",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L216",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "target": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity_oncreate",
+      "target": "activities_reportfoundactivity_reportfoundactivity_observeviewmodel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showimagesourcedialog",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "target": "activities_reportfoundactivity_reportfoundactivity_showdatepicker",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportfoundactivity_reportfoundactivity_setupclicklisteners",
+      "target": "activities_reportfoundactivity_reportfoundactivity_validateandsubmit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_activities_reportlostactivity_kt",
+      "target": "activities_reportlostactivity_reportlostactivity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L70",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_showimagepreview",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L111",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_showdatepicker",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_validateandsubmit",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L140",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_observeviewmodel",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L201",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity",
+      "target": "activities_reportlostactivity_reportlostactivity_onrequestpermissionsresult",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L231",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "target": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity_oncreate",
+      "target": "activities_reportlostactivity_reportlostactivity_observeviewmodel",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "target": "activities_reportlostactivity_reportlostactivity_showimagesourcedialog",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L75",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "target": "activities_reportlostactivity_reportlostactivity_showdatepicker",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_reportlostactivity_reportlostactivity_setupclicklisteners",
+      "target": "activities_reportlostactivity_reportlostactivity_validateandsubmit",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_activities_spotlightdemoactivity_kt",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity_oncreate",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_spotlightdemoactivity_spotlightdemoactivity_setupinteractivecard",
+      "target": "activities_spotlightdemoactivity_spotlightdemoactivity_togglesecuritystate",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "target": "adapters_itemadapter_itemadapter",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "target": "adapters_itemadapter_itemviewholder",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "adapters_itemadapter_itemviewholder",
+      "target": "adapters_itemadapter_itemviewholder_bind",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "adapters_itemadapter_itemadapter",
+      "target": "adapters_itemadapter_itemadapter_oncreateviewholder",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L76",
+      "weight": 1.0
+    },
+    {
+      "source": "adapters_itemadapter_itemadapter",
+      "target": "adapters_itemadapter_itemadapter_onbindviewholder",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_adapters_itemadapter_kt",
+      "target": "adapters_itemadapter_itemdiffcallback",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "adapters_itemadapter_itemdiffcallback",
+      "target": "adapters_itemadapter_itemdiffcallback_areitemsthesame",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "adapters_itemadapter_itemdiffcallback",
+      "target": "adapters_itemadapter_itemdiffcallback_arecontentsthesame",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "adapters_itemadapter_itemadapter_oncreateviewholder",
+      "target": "adapters_itemadapter_itemviewholder",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "adapters_itemadapter_itemadapter_onbindviewholder",
+      "target": "adapters_itemadapter_itemviewholder_bind",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_models_itemmodel_kt",
+      "target": "models_itemmodel_itemmodel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\models\\ItemModel.kt",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "target": "repository_firebaserepository_firebaserepository",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L27",
+      "weight": 1.0
+    },
+    {
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_uploadimage",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_repository_firebaserepository_kt",
+      "target": "repository_firebaserepository_cloudinaryresponse",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L141",
+      "weight": 1.0
+    },
+    {
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getitemsrealtime",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L148",
+      "weight": 1.0
+    },
+    {
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getitembyid",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L166",
+      "weight": 1.0
+    },
+    {
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getitemsbystatus",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "repository_firebaserepository_firebaserepository",
+      "target": "repository_firebaserepository_firebaserepository_getbackendurl",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "source_location": "L190",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_services_myfirebasemessagingservice_kt",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_onnewtoken",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "services_myfirebasemessagingservice_myfirebasemessagingservice_onmessagereceived",
+      "target": "services_myfirebasemessagingservice_myfirebasemessagingservice_shownotification",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_utils_constants_kt",
+      "target": "utils_constants_constants",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\Constants.kt",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_utils_imagepicker_kt",
+      "target": "utils_imagepicker_imagepicker",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_launchcamera",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L38",
+      "weight": 1.0
+    },
+    {
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_launchgallery",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_checkcamerapermission",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L69",
+      "weight": 1.0
+    },
+    {
+      "source": "utils_imagepicker_imagepicker",
+      "target": "utils_imagepicker_imagepicker_createimagefile",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "utils_imagepicker_imagepicker_launchcamera",
+      "target": "utils_imagepicker_imagepicker_createimagefile",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "source_location": "L39",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_viewmodels_itemviewmodel_kt",
+      "target": "viewmodels_itemviewmodel_itemviewmodel",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L20",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_fetchitembyid",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L121",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_submititem",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L132",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_clearerror",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L208",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_clearuploadsuccess",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L215",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_applysearchfilter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_loadallitems",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L114",
+      "weight": 1.0
+    },
+    {
+      "source": "viewmodels_itemviewmodel_itemviewmodel_searchitems",
+      "target": "viewmodels_itemviewmodel_itemviewmodel_loaditemsbystatus",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "source_location": "L116",
+      "weight": 1.0
+    },
+    {
+      "source": "app_src_main_java_com_example_lostfound_views_spotlightripplecard_kt",
+      "target": "views_spotlightripplecard_spotlightripplecard",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_onsizechanged",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L55",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L67",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_performclick",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L86",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_startrippleanimation",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_endrippleanimation",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard",
+      "target": "views_spotlightripplecard_spotlightripplecard_ondraw",
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L146",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard_onsizechanged",
+      "target": "views_spotlightripplecard_spotlightripplecard_calculatemaxradius",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "target": "views_spotlightripplecard_spotlightripplecard_startrippleanimation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "target": "views_spotlightripplecard_spotlightripplecard_endrippleanimation",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "views_spotlightripplecard_spotlightripplecard_ontouchevent",
+      "target": "views_spotlightripplecard_spotlightripplecard_performclick",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "activities_mainactivity_mainactivity_setuprecyclerview",
+      "target": "adapters_itemadapter_itemadapter",
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "source_location": "L74",
+      "weight": 1.0
+    }
+  ],
+  "input_tokens": 0,
+  "output_tokens": 0
+}

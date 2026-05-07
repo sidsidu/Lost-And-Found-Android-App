@@ -1,0 +1,37 @@
+{
+  "files": {
+    "code": [
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\build.gradle",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\settings.gradle",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\ai_backend\\ai_engine.py",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\ai_backend\\firebase_service.py",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\ai_backend\\main.py",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\build.gradle",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\activities\\ItemDetailActivity.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\activities\\MainActivity.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportFoundActivity.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\activities\\ReportLostActivity.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\activities\\SpotlightDemoActivity.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\adapters\\ItemAdapter.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\models\\ItemModel.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\repository\\FirebaseRepository.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\services\\MyFirebaseMessagingService.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\utils\\Constants.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\utils\\ImagePicker.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\viewmodels\\ItemViewModel.kt",
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\app\\src\\main\\java\\com\\example\\lostfound\\views\\SpotlightRippleCard.kt"
+    ],
+    "document": [
+      "C:\\Users\\Sid\\Desktop\\Coding Stuff\\Lost And Found Android App\\ai_backend\\requirements.txt"
+    ],
+    "paper": [],
+    "image": [],
+    "video": []
+  },
+  "total_files": 20,
+  "total_words": 6355,
+  "needs_graph": false,
+  "warning": "Corpus is ~6,355 words - fits in a single context window. You may not need a graph.",
+  "skipped_sensitive": [],
+  "graphifyignore_patterns": 0
+}

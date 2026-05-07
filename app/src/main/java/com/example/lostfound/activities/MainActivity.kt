@@ -42,6 +42,31 @@ class MainActivity : AppCompatActivity() {
         setupSearchBar()
         setupFilterChips()
         observeViewModel()
+        
+        requestNotificationPermission()
+        retrieveFcmToken()
+    }
+
+    private fun requestNotificationPermission() {
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.TIRAMISU) {
+            if (androidx.core.content.ContextCompat.checkSelfPermission(
+                    this, android.Manifest.permission.POST_NOTIFICATIONS
+                ) != android.content.pm.PackageManager.PERMISSION_GRANTED
+            ) {
+                requestPermissions(arrayOf(android.Manifest.permission.POST_NOTIFICATIONS), 101)
+            }
+        }
+    }
+
+    private fun retrieveFcmToken() {
+        com.google.firebase.messaging.FirebaseMessaging.getInstance().token.addOnCompleteListener { task ->
+            if (!task.isSuccessful) {
+                return@addOnCompleteListener
+            }
+            val token = task.result
+            val sharedPrefs = getSharedPreferences("LostFoundPrefs", android.content.Context.MODE_PRIVATE)
+            sharedPrefs.edit().putString("fcm_token", token).apply()
+        }
     }
 
     // setup list

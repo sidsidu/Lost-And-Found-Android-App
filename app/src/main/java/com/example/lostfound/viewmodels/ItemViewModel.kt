@@ -11,6 +11,10 @@ import com.example.lostfound.repository.FirebaseRepository
 import com.example.lostfound.utils.Constants
 import kotlinx.coroutines.flow.catch
 import kotlinx.coroutines.launch
+import okhttp3.MediaType.Companion.toMediaTypeOrNull
+import okhttp3.OkHttpClient
+import okhttp3.Request
+import okhttp3.RequestBody.Companion.toRequestBody
 
 // manages data between the ui and firestore
 class ItemViewModel : ViewModel() {
@@ -124,7 +128,7 @@ class ItemViewModel : ViewModel() {
         }
     }
 
-    // uploads the image to cloudinary and then saves the item text to firestore
+    // uploads the image to cloudinary, then sends data to AI backend
     fun submitItem(
         context: Context,
         imageUri: Uri,
@@ -141,24 +145,51 @@ class ItemViewModel : ViewModel() {
 
         viewModelScope.launch {
             try {
-                
+                // Step 1: Upload image to Cloudinary/ImgBB
                 val imageUrl = repository.uploadImage(context, imageUri)
 
-                // Step 2: Create the ItemModel
-                val item = ItemModel(
-                    itemName = itemName,
-                    description = description,
-                    status = status,
-                    lostLocation = lostLocation,
-                    foundLocation = foundLocation,
-                    dropOffLocation = dropOffLocation,
-                    contactPhone = contactPhone,
-                    imageUrl = imageUrl,
-                    date = date
-                )
+                // Step 2: Get FCM Token from SharedPreferences
+                val sharedPrefs = context.getSharedPreferences("LostFoundPrefs", Context.MODE_PRIVATE)
+                val fcmToken = sharedPrefs.getString("fcm_token", "") ?: ""
 
-                // Step 3: Save to Firestore
-                repository.addItem(item)
+                // Step 3: Send data to AI Backend (which saves to Firestore & checks matches)
+                val backendUrl = repository.getBackendUrl() ?: Constants.NGROK_BACKEND_URL
+                if (backendUrl.isBlank()) {
+                    throw Exception("Backend URL not found. Set BACKEND_NGROK_URL in ai_backend/.env and restart the Python server.")
+                }
+
+                val jsonObject = org.json.JSONObject().apply {
+                    put("itemName", itemName)
+                    put("description", description)
+                    put("status", status)
+                    put("lostLocation", lostLocation)
+                    put("foundLocation", foundLocation)
+                    put("dropOffLocation", dropOffLocation)
+                    put("contactPhone", contactPhone)
+                    put("date", date)
+                    put("fcmToken", fcmToken)
+                    put("imageUrl", imageUrl)
+                }
+
+                val mediaType = "application/json; charset=utf-8".toMediaTypeOrNull()
+                val requestBody = jsonObject.toString().toRequestBody(mediaType)
+
+                val request = Request.Builder()
+                    .url("$backendUrl/submit_item")
+                    .post(requestBody)
+                    .build()
+
+                val client = OkHttpClient()
+                
+                // Using withContext to perform network request on IO dispatcher
+                val response = kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO) {
+                    client.newCall(request).execute()
+                }
+
+                if (!response.isSuccessful) {
+                    val errorBody = response.body?.string()
+                    throw Exception("Backend error: ${response.code} $errorBody")
+                }
 
                 // Notify UI of success
                 _isUploading.value = false

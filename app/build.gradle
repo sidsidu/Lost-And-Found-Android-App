@@ -57,6 +57,7 @@ dependencies {
     // Firebase BOM — manages all Firebase library versions
     implementation platform('com.google.firebase:firebase-bom:32.7.1')
     implementation 'com.google.firebase:firebase-firestore-ktx'
+    implementation 'com.google.firebase:firebase-messaging-ktx'
 
     // OkHttp + Gson — for uploading images to ImgBB (free image hosting)
     implementation 'com.squareup.okhttp3:okhttp:4.12.0'
