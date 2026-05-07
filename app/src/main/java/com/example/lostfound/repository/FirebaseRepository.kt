@@ -162,6 +162,17 @@ class FirebaseRepository {
         awaitClose { listener.remove() }
     }
 
+    // save a new item directly to firestore
+    suspend fun saveItem(item: ItemModel): String {
+        return withContext(Dispatchers.IO) {
+            val docRef = itemsCollection.document()
+            // The item has an @DocumentId annotation on the 'id' field, so Firestore ignores it during serialization.
+            docRef.set(item).await()
+            docRef.id
+        }
+    }
+
+
     // get a single item using its id
     suspend fun getItemById(itemId: String): ItemModel? {
         val snapshot = itemsCollection.document(itemId).get().await()

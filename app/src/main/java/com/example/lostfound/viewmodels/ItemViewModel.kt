@@ -152,30 +152,42 @@ class ItemViewModel : ViewModel() {
                 val sharedPrefs = context.getSharedPreferences("LostFoundPrefs", Context.MODE_PRIVATE)
                 val fcmToken = sharedPrefs.getString("fcm_token", "") ?: ""
 
-                // Step 3: Send data to AI Backend (which saves to Firestore & checks matches)
+                // Step 3: Save to Firestore directly
+                val itemToSave = ItemModel(
+                    itemName = itemName,
+                    description = description,
+                    status = status,
+                    lostLocation = lostLocation,
+                    foundLocation = foundLocation,
+                    dropOffLocation = dropOffLocation,
+                    contactPhone = contactPhone,
+                    date = date,
+                    fcmToken = fcmToken,
+                    imageUrl = imageUrl
+                )
+                
+                val documentId = repository.saveItem(itemToSave)
+
+                // Step 4: Send data to AI Backend to process in background
                 val backendUrl = repository.getBackendUrl() ?: Constants.NGROK_BACKEND_URL
                 if (backendUrl.isBlank()) {
                     throw Exception("Backend URL not found. Set BACKEND_NGROK_URL in ai_backend/.env and restart the Python server.")
                 }
 
                 val jsonObject = org.json.JSONObject().apply {
+                    put("documentId", documentId)
                     put("itemName", itemName)
                     put("description", description)
                     put("status", status)
-                    put("lostLocation", lostLocation)
-                    put("foundLocation", foundLocation)
-                    put("dropOffLocation", dropOffLocation)
-                    put("contactPhone", contactPhone)
-                    put("date", date)
-                    put("fcmToken", fcmToken)
                     put("imageUrl", imageUrl)
+                    put("fcmToken", fcmToken)
                 }
 
                 val mediaType = "application/json; charset=utf-8".toMediaTypeOrNull()
                 val requestBody = jsonObject.toString().toRequestBody(mediaType)
 
                 val request = Request.Builder()
-                    .url("$backendUrl/submit_item")
+                    .url("$backendUrl/process_item_async")
                     .post(requestBody)
                     .build()
 

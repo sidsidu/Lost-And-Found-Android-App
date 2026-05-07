@@ -43,19 +43,28 @@ def save_item_and_check_matches(item_data: dict, embedding: list):
 
     # 1. Save to Firestore
     doc_ref = db.collection("items").document()
-    item_data["id"] = doc_ref.id
-    item_data["embedding"] = embedding  # Save the embedding for future matches
-    item_data["timestamp"] = firestore.SERVER_TIMESTAMP
     
-    doc_ref.set(item_data)
+    # CRASH FIX: Do not set "id" in the document explicitly if Android uses @DocumentId.
+    item_data_copy = item_data.copy()
+    item_data_copy.pop("id", None)
+    
+    # CRASH FIX: Ensure dominantColors is a list of strings
+    colors = item_data_copy.get("dominantColors", [])
+    if isinstance(colors, str):
+        colors = [c.strip() for c in colors.split(",")]
+    elif not isinstance(colors, list):
+        colors = []
+    item_data_copy["dominantColors"] = colors
+
+    item_data_copy["embedding"] = embedding  # Save the embedding for future matches
+    item_data_copy["timestamp"] = firestore.SERVER_TIMESTAMP
+    
+    doc_ref.set(item_data_copy)
     print(f"Saved item {doc_ref.id} to Firestore.")
 
     # 2. Check for matches
     target_status = "found" if item_data.get("status") == "lost" else "lost"
     
-    # Get recent items of the opposite status
-    # Note: In a large production app, you would use a Vector DB (like Pinecone) 
-    # or Firestore's new vector search. We will do local cosine similarity for simplicity.
     docs = db.collection("items").where("status", "==", target_status).limit(50).stream()
 
     best_match = None
@@ -69,16 +78,70 @@ def save_item_and_check_matches(item_data: dict, embedding: list):
             if score > highest_score:
                 highest_score = score
                 best_match = other_item
+                best_match["id"] = doc.id # attach ID from doc snapshot
 
     # Threshold for a match (e.g., 0.75 or 75% similarity)
     if highest_score > 0.75 and best_match:
         print(f"Found a match! Score: {highest_score:.2f} -> {best_match.get('itemName')}")
-        send_match_notification(item_data, best_match)
+        send_match_notification(item_data_copy, best_match, new_item_id=doc_ref.id)
         return {"match_found": True, "match_score": float(highest_score), "match_id": best_match.get("id")}
     
     return {"match_found": False}
 
-def send_match_notification(new_item: dict, matched_item: dict):
+def process_and_update_item(document_id: str, item_data: dict, ai_data: dict, embedding: list):
+    """
+    Updates an existing item with AI data and searches for matches.
+    """
+    if not db:
+        print("Firebase DB not available.")
+        return None
+
+    # CRASH FIX: Ensure dominantColors is a list of strings
+    colors = ai_data.get("dominant_colors", [])
+    if isinstance(colors, str):
+        colors = [c.strip() for c in colors.split(",")]
+    elif not isinstance(colors, list):
+        colors = []
+
+    # 1. Update the document in Firestore
+    updates = {
+        "aiDescription": str(ai_data.get("description", "")),
+        "category": str(ai_data.get("category", "")),
+        "dominantColors": colors,
+        "detectedText": str(ai_data.get("detected_text", "None")),
+        "embedding": embedding,
+    }
+    
+    # We update instead of set to keep any data written by Android
+    db.collection("items").document(document_id).update(updates)
+    print(f"Updated item {document_id} with AI data.")
+
+    # 2. Check for matches
+    target_status = "found" if item_data.get("status") == "lost" else "lost"
+    docs = db.collection("items").where("status", "==", target_status).limit(50).stream()
+
+    best_match = None
+    highest_score = 0.0
+
+    for doc in docs:
+        other_item = doc.to_dict()
+        other_embedding = other_item.get("embedding")
+        if other_embedding:
+            score = cosine_similarity(embedding, other_embedding)
+            if score > highest_score:
+                highest_score = score
+                best_match = other_item
+                best_match["id"] = doc.id
+
+    if highest_score > 0.75 and best_match:
+        print(f"Found a match! Score: {highest_score:.2f} -> {best_match.get('itemName')}")
+        send_match_notification(item_data, best_match, new_item_id=document_id)
+        return {"match_found": True, "match_score": float(highest_score), "match_id": best_match.get("id")}
+    
+    return {"match_found": False}
+
+
+def send_match_notification(new_item: dict, matched_item: dict, new_item_id: str = None):
     """
     Sends an FCM notification to the user of the matched item.
     """
@@ -96,7 +159,7 @@ def send_match_notification(new_item: dict, matched_item: dict):
             body=body
         ),
         data={
-            "matched_item_id": new_item.get("id")
+            "matched_item_id": new_item_id or new_item.get("id", "")
         },
         token=token
     )

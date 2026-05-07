@@ -1,7 +1,9 @@
 # IDEs
-/.idea
-/.vscode
+
+.idea/
+.vscode/
 *.iml
+*.iws
 .DS_Store
 
 # Android/Gradle builds
@@ -29,8 +31,25 @@ app/google-services.json
 __pycache__/
 *.py[cod]
 *$py.class
-venv/
 .venv/
+venv/
+/.idea
+/.vscode
+ENV/
 env/
 .env
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Secrets/Keys
+app key
+app/google-services.json
+ai_backend/serviceAccountKey.json
+ai_backend/.env
+ai_backend/scratch/
+
+# Tooling/Outputs
+graphify-out/
+.ipynb_checkpoints/
 serviceAccountKey.json

@@ -1,5 +1,5 @@
 import os
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import requests
@@ -42,9 +42,52 @@ class ItemSubmitRequest(BaseModel):
     fcmToken: str = ""
     imageUrl: str = ""
 
+class ItemAsyncRequest(BaseModel):
+    documentId: str
+    itemName: str
+    description: str = ""
+    status: str
+    imageUrl: str = ""
+    fcmToken: str = ""
+
+
 @app.get("/")
 def read_root():
     return {"status": "AI Backend is running!"}
+
+def process_item_background_task(req: ItemAsyncRequest):
+    try:
+        print(f"Background Task: Downloading image for {req.itemName} from {req.imageUrl}...")
+        response = requests.get(req.imageUrl)
+        response.raise_for_status()
+        pil_image = Image.open(io.BytesIO(response.content)).convert("RGB")
+        
+        print(f"Background Task: Processing image for {req.itemName}...")
+        ai_data = ai_engine.analyze_image(pil_image)
+        
+        combined_text = f"Name: {req.itemName}. User Desc: {req.description}. AI Desc: {ai_data.get('description', '')}. Category: {ai_data.get('category', '')}."
+        
+        print("Background Task: Generating embedding...")
+        embedding = ai_engine.generate_embedding(combined_text)
+        
+        item_data = req.dict()
+        
+        print(f"Background Task: Updating Firestore for {req.documentId}...")
+        firebase_service.process_and_update_item(req.documentId, item_data, ai_data, embedding)
+        
+    except Exception as e:
+        print(f"Background Task Error processing {req.itemName}:", e)
+
+@app.post("/process_item_async")
+async def process_item_async(req: ItemAsyncRequest, background_tasks: BackgroundTasks):
+    # Enqueue the background task
+    background_tasks.add_task(process_item_background_task, req)
+    
+    # Return immediately to the Android app
+    return JSONResponse(status_code=202, content={
+        "success": True,
+        "message": "Item processing started in the background."
+    })
 
 @app.post("/submit_item")
 async def submit_item(req: ItemSubmitRequest):
